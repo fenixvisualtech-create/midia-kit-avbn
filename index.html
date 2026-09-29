@@ -1,0 +1,2078 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVBN • Associação de Vôlei de Braço do Norte | Mídia Kit Oficial - Lei de Incentivo ao Esporte</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Bebas Neue -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- QRCode.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            athletic: ['"Bebas Neue"', 'sans-serif'],
+          },
+          colors: {
+            avbn: {
+              green: '#047857',      /* Verde Esmeralda Oficial */
+              darkGreen: '#064e3b',  /* Verde Floresta Escuro */
+              deepGreen: '#022c22',  /* Verde Profundo */
+              lime: '#84cc16',       /* Verde Limão Elétrico / Accent */
+              lightLime: '#bef264',  /* Verde Claro */
+              mint: '#ecfdf5',       /* Fundo Menta Suave */
+              black: '#0f172a',      /* Preto Gráfico */
+              gray: '#64748b',       /* Cinza Editorial */
+              lightGray: '#f8fafc',  /* Fundo Off-White */
+              cardBg: '#ffffff',     /* Cartão Branco Puro */
+              border: '#e2e8f0',     /* Borda Delicada */
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #ffffff;
+      color: #0f172a;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    .font-athletic {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 0.04em;
+    }
+
+    /* Print Calibration */
+    @media print {
+      @page {
+        size: A4 landscape;
+        margin: 0;
+      }
+      html, body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .site-section {
+        page-break-after: always !important;
+        break-after: page !important;
+        padding: 12mm 15mm !important;
+        min-height: 210mm !important;
+        box-sizing: border-box !important;
+      }
+      #hero {
+        padding: 0 !important;
+      }
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #047857;
+    }
+  </style>
+</head>
+<body class="min-h-screen text-slate-800 flex flex-col selection:bg-avbn-green selection:text-white">
+
+  <!-- =========================================================================
+       STICKY WEBSITE HEADER (NAVBAR MODERNA E MINIMALISTA - APARECE NA ROLAGEM)
+       ========================================================================= -->
+  <header id="mainNavbar" class="no-print fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 px-4 sm:px-8 py-3 shadow-md transition-all duration-300 transform -translate-y-full opacity-0 pointer-events-none">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo & Title -->
+      <a href="#hero" class="flex items-center gap-2.5 group shrink-0">
+        <div class="w-9 h-9 flex items-center justify-center group-hover:scale-105 transition">
+          <img src="assets/logo.png" alt="AVBN Oficial" class="w-full h-full object-contain">
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-base font-black tracking-tight text-slate-900 font-sans">AVBN</span>
+          <span class="hidden sm:inline-block text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-avbn-darkGreen border border-emerald-200">Lei nº 2504642</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden xl:flex items-center gap-1">
+        <a href="#hero" class="nav-site-link px-2.5 py-1.5 rounded-lg text-xs font-bold text-avbn-darkGreen bg-emerald-50 border border-emerald-200 shadow-2xs transition" data-nav="hero">Início</a>
+        <a href="#quem-somos" class="nav-site-link px-2.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-avbn-green hover:bg-slate-50 border border-transparent transition" data-nav="quem-somos">Quem Somos</a>
+        <a href="#projeto" class="nav-site-link px-2.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-avbn-green hover:bg-slate-50 border border-transparent transition" data-nav="projeto">O Projeto</a>
+        <a href="#impacto" class="nav-site-link px-2.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-avbn-green hover:bg-slate-50 border border-transparent transition" data-nav="impacto">Impacto Social</a>
+        <a href="#contrapartidas" class="nav-site-link px-2.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-avbn-green hover:bg-slate-50 border border-transparent transition" data-nav="contrapartidas">Contrapartidas</a>
+        <a href="#transparencia" class="nav-site-link px-2.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-avbn-green hover:bg-slate-50 border border-transparent transition" data-nav="transparencia">Transparência</a>
+        <a href="#como-participar" class="nav-site-link px-2.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-avbn-green hover:bg-slate-50 border border-transparent transition" data-nav="como-participar">Como Participar</a>
+        <a href="#galeria" class="nav-site-link px-2.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-avbn-green hover:bg-slate-50 border border-transparent transition" data-nav="galeria">Galeria</a>
+        <a href="#contato" class="nav-site-link px-2.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-avbn-green hover:bg-slate-50 border border-transparent transition" data-nav="contato">Contato</a>
+      </nav>
+
+      <!-- Right Actions: Instagram + CTA + Mobile Hamburger -->
+      <div class="flex items-center gap-2 shrink-0">
+        <!-- Instagram Button in Sticky Navbar -->
+        <a href="https://instagram.com/voleibn" target="_blank" class="w-8 h-8 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 border border-white/20 flex items-center justify-center text-white hover:scale-110 transition shadow-xs" title="Instagram Oficial @voleibn">
+          <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+
+        <a href="#contato" class="hidden sm:flex px-4 py-2 text-xs font-bold rounded-xl bg-avbn-green hover:bg-emerald-700 text-white shadow-xs items-center gap-1.5 transition">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-avbn-lime"></i>
+          <span>Apoie o Projeto</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuToggle" onclick="toggleMobileMenu()" class="xl:hidden p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition" aria-label="Abrir Menu">
+          <i data-lucide="menu" id="menuIcon" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Dropdown -->
+    <div id="mobileMenu" class="hidden xl:hidden border-t border-slate-200 mt-3 pt-3 pb-2 space-y-1">
+      <a href="#hero" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-xs font-bold text-avbn-darkGreen bg-emerald-50">Início</a>
+      <a href="#quem-somos" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-50">Quem Somos</a>
+      <a href="#projeto" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-50">O Projeto</a>
+      <a href="#impacto" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-50">Impacto Social</a>
+      <a href="#contrapartidas" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-50">Contrapartidas</a>
+      <a href="#transparencia" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-50">Transparência</a>
+      <a href="#como-participar" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-50">Como Participar</a>
+      <a href="#galeria" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-50">Galeria de Fotos</a>
+      <a href="#contato" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-50">Contato & Central de Ações</a>
+      
+      <!-- Instagram Link in Mobile Menu -->
+      <a href="https://instagram.com/voleibn" target="_blank" onclick="closeMobileMenu()" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-semibold text-slate-700 hover:bg-slate-50">
+        <span class="w-6 h-6 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 flex items-center justify-center text-white shrink-0">
+          <svg class="w-3.5 h-3.5 fill-white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </span>
+        <span class="text-slate-800 font-bold">Siga no Instagram (@voleibn)</span>
+      </a>
+
+      <div class="pt-2">
+        <a href="#contato" onclick="closeMobileMenu()" class="w-full py-2.5 rounded-xl bg-avbn-green text-white text-xs font-bold flex items-center justify-center gap-1.5 shadow-sm">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-avbn-lime"></i>
+          <span>Apoie o Projeto Agora</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       MAIN CONTINUOUS WEBSITE STREAM (SEM PAGINAÇÃO RÍGIDA)
+       ========================================================================= -->
+  <main class="w-full flex flex-col flex-1">
+
+    <!-- =======================================================================
+         SEÇÃO 1: HERO / CAPA (ESTILO SPINTIP COM FOTO NÍTIDA EM DESTAQUE)
+         ======================================================================= -->
+    <section id="hero" class="site-section relative min-h-[94vh] lg:min-h-[92vh] flex flex-col justify-between overflow-hidden bg-slate-950 text-white">
+      
+      <!-- Background Real Photo (Nítida, Clara e com Cores Vivas) -->
+      <div class="absolute inset-0 z-0 hidden lg:block overflow-hidden">
+        <img src="assets/hero_bolas.jpeg" alt="Atletas AVBN em Quadra" class="w-full h-full object-cover object-[center_32%] filter brightness-110 contrast-110 saturate-110">
+        <!-- Gradientes direcionais sutis: mantêm a foto super nítida no centro/direita e garantem legibilidade no texto -->
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/45 via-45% to-slate-950/15"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/35 via-20% to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-transparent to-transparent"></div>
+      </div>
+
+      <!-- Top Row inside Hero: Official Logo on Left, Social Media on Right -->
+      <div class="relative z-10 max-w-7xl mx-auto w-full px-3 py-3 sm:px-6 sm:py-6 lg:px-10 lg:py-8 flex flex-row items-center justify-between gap-2 sm:gap-4">
+        <!-- AVBN Official Logo & Government Incentive Badge -->
+        <div class="flex items-center gap-2.5 sm:gap-3.5 bg-slate-900/80 sm:bg-slate-950/65 backdrop-blur-md px-3 py-1.5 sm:px-4 sm:py-2.5 rounded-2xl border border-white/15 shadow-xl">
+          <img src="assets/logo.png" alt="AVBN Oficial" class="w-8 h-8 sm:w-11 sm:h-11 object-contain filter drop-shadow">
+          <div>
+            <div class="text-[9px] sm:text-[10px] uppercase tracking-widest text-avbn-lime font-extrabold leading-tight">Associação de Vôlei BN</div>
+            <div class="text-xs sm:text-sm font-black tracking-tight text-white leading-tight">VÔLEI BRAÇO DO NORTE</div>
+            <div class="text-[8px] sm:text-[9px] text-slate-300 font-medium hidden sm:block">Fundada em 16/01/2019 • Braço do Norte / SC</div>
+          </div>
+        </div>
+
+        <!-- Top Right: "Siga a AVBN" with Sharp Vector Icons (Always Visible) -->
+        <div class="flex items-center gap-2 sm:gap-3 bg-slate-900/80 sm:bg-slate-950/65 backdrop-blur-md px-3 py-1.5 sm:px-4 sm:py-2.5 rounded-2xl border border-white/15 shadow-xl shrink-0">
+          <span class="text-[10px] sm:text-[11px] font-bold text-avbn-lime uppercase tracking-wider">Siga a AVBN</span>
+          <div class="flex items-center gap-1.5 sm:gap-2">
+            <!-- Instagram -->
+            <a href="https://instagram.com/voleibn" target="_blank" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 border border-white/30 flex items-center justify-center text-white hover:scale-110 transition shadow-md group" title="Instagram @voleibn">
+              <svg class="w-3.5 h-3.5 fill-white" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/5548999990000" target="_blank" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-800 border border-white/20 flex items-center justify-center text-white hover:bg-emerald-600 hover:border-emerald-300 transition shadow-md group" title="WhatsApp Oficial">
+              <svg class="w-3.5 h-3.5 text-white group-hover:scale-110 transition" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </a>
+            <!-- E-mail -->
+            <a href="mailto:contato@voleibn.org.br" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-800 border border-white/20 flex items-center justify-center text-white hover:bg-sky-600 hover:border-sky-300 transition shadow-md group" title="E-mail Institucional">
+              <svg class="w-3.5 h-3.5 text-white group-hover:scale-110 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- DEDICATED FEATURED PHOTO ON MOBILE (Fiel à referência do usuário "foto" em media_1790621371691.png) -->
+      <div class="block lg:hidden w-full max-w-7xl mx-auto px-3 sm:px-6 pt-1 pb-2 relative z-10">
+        <div onclick="openLightbox(0)" class="relative w-full aspect-[4/3] sm:aspect-[16/9] rounded-2xl overflow-hidden border border-white/20 shadow-2xl bg-slate-900 group cursor-pointer">
+          <img src="assets/hero_bolas.jpeg" alt="Atletas AVBN em Quadra" class="w-full h-full object-cover object-[center_30%] filter brightness-110 contrast-110 saturate-110 group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-white">
+            <span class="text-[10px] sm:text-[11px] font-bold bg-slate-950/85 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20 text-avbn-lime shadow-sm">
+              Atletas Oficiais • Braço do Norte
+            </span>
+            <span class="w-7 h-7 rounded-full bg-emerald-500 text-slate-950 flex items-center justify-center font-bold shadow-md group-hover:scale-110 transition" title="Toque para abrir em tela cheia">
+              <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content Area: Headline + Explanatory Text + 3 Key Metrics -->
+      <div class="relative z-10 max-w-7xl mx-auto w-full px-3 sm:px-6 lg:px-10 py-3 sm:py-6 lg:py-10 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-end">
+        
+        <!-- Left: Athletic Headline & Subtitle (7 cols) -->
+        <div class="lg:col-span-7 flex flex-col justify-end space-y-2 sm:space-y-4">
+          <!-- Personalized Badge for Visiting Company (if configured) -->
+          <div id="coverCompanyCustom" class="hidden items-center gap-2 bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 px-3 py-1 rounded-full text-xs font-bold w-fit backdrop-blur-md">
+            <i data-lucide="building" class="w-3.5 h-3.5 text-avbn-lime"></i>
+            <span>Apresentação Exclusiva para: <strong id="companyBadgeName" class="text-white custom-company-target">Sua Empresa</strong></span>
+          </div>
+
+          <!-- High Impact Typography (Inspirado no modelo Spintip) -->
+          <div>
+            <span class="text-avbn-lime font-athletic text-3xl sm:text-5xl lg:text-7xl block leading-none filter drop-shadow">
+              VÔLEI AVBN.
+            </span>
+            <h1 class="text-xl sm:text-3xl lg:text-5xl xl:text-6xl font-black text-white tracking-tight leading-tight filter drop-shadow-md">
+              “FORMANDO O CIDADÃO ATLETA!”
+            </h1>
+          </div>
+
+          <!-- Explanatory Subtitle -->
+          <p class="text-[11px] sm:text-sm lg:text-base text-slate-200 leading-relaxed max-w-2xl font-medium filter drop-shadow">
+            Como sua empresa pode transformar parte do <strong>Imposto de Renda devido (Lucro Real)</strong> em esporte, educação, saúde e futuro para <strong>300 crianças e adolescentes</strong> de Braço do Norte. <strong>Custo zero para a empresa e 100% de dedução fiscal.</strong>
+          </p>
+
+          <!-- Ministry & Process Tag -->
+          <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 pt-0.5 text-[11px] sm:text-xs text-slate-300">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-900/80 backdrop-blur-md border border-white/15 text-white font-semibold">
+              <span class="w-1.5 h-1.5 rounded-full bg-avbn-lime animate-pulse"></span>
+              Processo Oficial: <strong class="text-avbn-lime">Nº 2504642</strong>
+            </span>
+            <span class="hidden sm:inline text-slate-400">•</span>
+            <span class="text-slate-300 font-medium hidden sm:inline">Ministério do Esporte • Governo Federal</span>
+          </div>
+
+          <!-- CTAs (Stack vertical full-width no celular como na referência media_1790621371691.png) -->
+          <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 w-full">
+            <a href="#como-participar" class="w-full sm:w-auto px-5 py-3 sm:py-2.5 rounded-xl bg-avbn-lime hover:bg-lime-400 text-slate-950 font-black text-xs uppercase tracking-wider transition shadow-lg flex items-center justify-center gap-2">
+              <i data-lucide="trending-up" class="w-4 h-4"></i>
+              <span>Como Funciona o Aporte</span>
+            </a>
+            <a href="#quem-somos" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-white/15 hover:bg-white/25 border border-white/20 text-white font-bold text-xs transition backdrop-blur-md flex items-center justify-center gap-2">
+              <i data-lucide="arrow-down" class="w-4 h-4"></i>
+              <span>Conhecer a Associação</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: 3 Metric Cards (Fiel à Referência: 3 colunas horizontais no mobile, empilhadas no desktop) -->
+        <div class="lg:col-span-5 grid grid-cols-3 lg:grid-cols-1 gap-1.5 sm:gap-3 pt-2 lg:pt-0">
+          
+          <!-- Card 1: Projeto Aprovado -->
+          <div class="bg-slate-900/85 sm:bg-slate-950/75 backdrop-blur-md border border-white/15 p-2 sm:p-4 rounded-xl sm:rounded-2xl flex flex-col sm:flex-row items-center sm:items-center gap-1.5 sm:gap-3.5 text-center sm:text-left hover:border-emerald-400/40 transition shadow-lg">
+            <div class="w-7 h-7 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-emerald-500/20 text-avbn-lime flex items-center justify-center shrink-0 border border-emerald-500/30">
+              <i data-lucide="award" class="w-3.5 h-3.5 sm:w-6 sm:h-6"></i>
+            </div>
+            <div class="overflow-hidden min-w-0">
+              <div class="text-[8px] sm:text-[10px] uppercase font-bold text-slate-400 truncate">PROJETO DOU</div>
+              <div class="text-[10px] sm:text-sm font-black text-white leading-tight truncate">Nº 2504642</div>
+              <div class="text-[9px] sm:text-xs font-bold text-avbn-lime truncate">R$ 353.095,11</div>
+            </div>
+          </div>
+
+          <!-- Card 2: 100% Dedução Fiscal -->
+          <div class="bg-slate-900/85 sm:bg-slate-950/75 backdrop-blur-md border border-white/15 p-2 sm:p-4 rounded-xl sm:rounded-2xl flex flex-col sm:flex-row items-center sm:items-center gap-1.5 sm:gap-3.5 text-center sm:text-left hover:border-emerald-400/40 transition shadow-lg">
+            <div class="w-7 h-7 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-emerald-500/20 text-avbn-lime flex items-center justify-center shrink-0 border border-emerald-500/30">
+              <i data-lucide="calculator" class="w-3.5 h-3.5 sm:w-6 sm:h-6"></i>
+            </div>
+            <div class="overflow-hidden min-w-0">
+              <div class="text-[8px] sm:text-[10px] uppercase font-bold text-slate-400 truncate">LUCRO REAL</div>
+              <div class="text-[10px] sm:text-sm font-black text-white leading-tight truncate">100% Dedução</div>
+              <div class="text-[9px] sm:text-xs text-slate-300 truncate">Custo: <strong class="text-white">R$ 0,00</strong></div>
+            </div>
+          </div>
+
+          <!-- Card 3: 300 Crianças e Jovens -->
+          <div class="bg-slate-900/85 sm:bg-slate-950/75 backdrop-blur-md border border-white/15 p-2 sm:p-4 rounded-xl sm:rounded-2xl flex flex-col sm:flex-row items-center sm:items-center gap-1.5 sm:gap-3.5 text-center sm:text-left hover:border-emerald-400/40 transition shadow-lg">
+            <div class="w-7 h-7 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/20 text-avbn-lime flex items-center justify-center shrink-0 border border-emerald-500/30">
+              <i data-lucide="users" class="w-3.5 h-3.5 sm:w-6 sm:h-6"></i>
+            </div>
+            <div class="overflow-hidden min-w-0">
+              <div class="text-[8px] sm:text-[10px] uppercase font-bold text-slate-400 truncate">FORMAÇÃO</div>
+              <div class="text-[10px] sm:text-sm font-black text-white leading-tight truncate">300 Crianças</div>
+              <div class="text-[9px] sm:text-xs text-slate-300 truncate">3 Núcleos BN</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar inside Hero: Location & Down Indicator -->
+      <div class="relative z-10 px-3 sm:px-6 lg:px-10 py-2.5 sm:py-3 bg-slate-950/90 backdrop-blur-md border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-1 text-[10px] sm:text-xs text-slate-400 text-center sm:text-left">
+        <div>Braço do Norte / Santa Catarina • Associação de Vôlei BN (AVBN)</div>
+        <div class="flex items-center gap-1.5 text-avbn-lime font-bold">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+          <span>Lei Federal nº 11.438/2006</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- =======================================================================
+         SEÇÃO 2: QUEM SOMOS
+         ======================================================================= -->
+    <section id="quem-somos" class="site-section w-full py-16 sm:py-24 bg-white border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-4 border-b border-slate-100">
+          <div>
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-avbn-darkGreen border border-emerald-200 text-xs font-bold uppercase tracking-wider mb-2">
+              <i data-lucide="shield" class="w-3.5 h-3.5 text-avbn-green"></i>
+              Apresentação Institucional
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Quem Somos • Associação de Vôlei BN</h2>
+            <p class="text-sm text-slate-500 mt-1">Conheça nossa trajetória, propósito social e atuação esportiva em Braço do Norte.</p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <img src="assets/logo.png" alt="AVBN Oficial" class="w-9 h-9 object-contain">
+            <div class="flex items-center gap-2 bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-full text-xs font-semibold">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-avbn-green"></i>
+              Braço do Norte / SC • Desde 2019
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 Columns Grid: Story/Mission + Real Community Photo & Nucleos -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          
+          <!-- Left Column (7 cols): History & Mission -->
+          <div class="lg:col-span-7 flex flex-col justify-between space-y-6">
+            <!-- Breve Histórico -->
+            <div class="bg-slate-50/80 p-6 rounded-3xl border border-slate-200 shadow-xs relative">
+              <div class="flex items-center gap-2 text-avbn-darkGreen font-bold text-xs uppercase tracking-wider mb-2.5">
+                <i data-lucide="history" class="w-4 h-4 text-avbn-green"></i>
+                Breve Histórico
+              </div>
+              <p class="text-sm text-slate-700 leading-relaxed">
+                A <strong>Associação de Vôlei BN (AVBN)</strong> nasceu da união de amigos apaixonados pelo esporte e comprometidos com o fortalecimento da prática na comunidade. Com a proposta de ampliar o acesso ao voleibol e criar novas oportunidades para crianças e adolescentes, a entidade foi idealizada como um espaço de acolhimento, aprendizado e crescimento por meio do esporte.
+              </p>
+              <p class="text-sm text-slate-600 leading-relaxed mt-2.5">
+                Fundada em <strong>2019, em Braço do Norte/SC</strong>, a AVBN atua em parceria com a Prefeitura Municipal, oferecendo treinamentos, participação em competições e atividades voltadas à formação esportiva e humana. Ao longo de sua trajetória, consolidou-se como referência regional no voleibol de base, representando o município em competições estaduais e regionais.
+              </p>
+            </div>
+
+            <!-- Missão (Card com fundo verde suave / menta) -->
+            <div class="bg-avbn-mint p-6 rounded-3xl border border-emerald-200">
+              <div class="flex items-center gap-2 text-avbn-darkGreen font-bold text-xs uppercase tracking-wider mb-2">
+                <i data-lucide="target" class="w-4 h-4 text-avbn-green"></i>
+                Nossa Missão
+              </div>
+              <p class="text-sm text-slate-800 leading-relaxed">
+                Utilizar o voleibol como <strong>ferramenta de transformação social</strong>, promovendo acesso ao esporte, inclusão, educação e qualidade de vida. A AVBN busca proporcionar experiências que contribuam para a formação integral de suas participantes, estimulando valores como <em>ética, respeito, disciplina, cooperação, comprometimento e superação</em>, preparando crianças e jovens para os desafios dentro e fora das quadras.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column (5 cols): Real Gym Photo + 3 Nucleos -->
+          <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+            <!-- REAL COMMUNITY GYM PHOTO - 100% Completa e Descoberta -->
+            <div class="bg-white p-3.5 sm:p-4 rounded-3xl border border-slate-200 shadow-sm flex flex-col group hover:border-emerald-300 transition">
+              <div onclick="openLightbox(1)" class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-slate-100 cursor-pointer shadow-xs group bg-slate-100">
+                <img src="assets/comunidade_ginasio.jpeg" alt="Comunidade e Alunas AVBN" class="w-full h-full object-cover filter brightness-100 group-hover:scale-105 transition duration-500">
+                <div class="absolute bottom-2.5 right-2.5 opacity-0 group-hover:opacity-100 transition-opacity bg-slate-950/85 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1.5 border border-white/20 shadow-md">
+                  <i data-lucide="maximize-2" class="w-3 h-3 text-avbn-lime"></i>
+                  <span>Tela cheia</span>
+                </div>
+              </div>
+              <div class="pt-3 px-1 flex items-start justify-between gap-3">
+                <div class="flex-1">
+                  <div class="flex items-baseline gap-2">
+                    <span class="text-3xl font-athletic text-avbn-green">+4.000</span>
+                    <span class="text-xs font-bold text-slate-800 leading-tight">Alunas impactadas pelas atividades</span>
+                  </div>
+                  <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                    Trabalho comunitário contínuo nos ginásios municipais de Braço do Norte, unindo juventude e famílias.
+                  </p>
+                </div>
+                <button onclick="openLightbox(1)" class="p-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-avbn-darkGreen border border-emerald-200 shrink-0 transition" title="Ampliar Foto">
+                  <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Atividades Desenvolvidas & Núcleos -->
+            <div class="bg-slate-50 p-5 rounded-3xl border border-slate-200">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-avbn-darkGreen flex items-center gap-1.5">
+                  <i data-lucide="compass" class="w-4 h-4 text-avbn-green"></i>
+                  Atividades e Núcleos Ativos
+                </span>
+                <span class="text-xs font-bold text-avbn-green bg-emerald-100 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                  +200 Alunas Atuais
+                </span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Atendimento estruturado no contraturno escolar, desde a iniciação esportiva até o aperfeiçoamento técnico e competições estaduais.
+              </p>
+              <!-- 3 Clean Nucleus Cards -->
+              <div class="grid grid-cols-3 gap-3 text-center text-xs">
+                <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-xs">
+                  <div class="font-bold text-slate-900">Centro</div>
+                  <div class="text-[11px] text-slate-500">Ginásio Atílio Ghisi</div>
+                </div>
+                <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-xs">
+                  <div class="font-bold text-slate-900">Bela Vista</div>
+                  <div class="text-[11px] text-slate-500">Núcleo Comunitário</div>
+                </div>
+                <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-xs">
+                  <div class="font-bold text-slate-900">Rio Bonito</div>
+                  <div class="text-[11px] text-slate-500">Núcleo Esportivo</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SEÇÃO 3: O PROJETO DE INCENTIVO AO ESPORTE
+         ======================================================================= -->
+    <section id="projeto" class="site-section w-full py-16 sm:py-24 bg-slate-50 border-b border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-4 border-b border-slate-200">
+          <div>
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-avbn-darkGreen border border-emerald-200 text-xs font-bold uppercase tracking-wider mb-2">
+              <i data-lucide="file-check" class="w-3.5 h-3.5 text-avbn-green"></i>
+              Mecanismo Fiscal (Lei Federal nº 11.438/06)
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">O Projeto de Incentivo • Destinação Inteligente</h2>
+            <p class="text-sm text-slate-600 mt-1">Como o incentivo fiscal federal viabiliza materiais, estrutura e equipe para 300 atletas.</p>
+          </div>
+          <div class="bg-emerald-100 border border-emerald-300 px-4 py-2 rounded-2xl text-xs font-bold text-avbn-darkGreen flex items-center gap-2 shadow-xs shrink-0">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-avbn-green"></i>
+            100% de Dedução no IRPJ (Lucro Real)
+          </div>
+        </div>
+
+        <!-- 2 Columns Grid: Summary + Breakdown -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          
+          <!-- Left Column (7 cols): Execution Details & 3 Core Actions -->
+          <div class="lg:col-span-7 flex flex-col justify-between space-y-6">
+            <!-- Project Execution Box -->
+            <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
+              <div class="flex items-center justify-between gap-4 mb-3">
+                <span class="text-xs font-bold text-avbn-darkGreen uppercase tracking-wider">Resumo Executivo do Projeto</span>
+                <span class="text-xs font-mono font-bold bg-slate-100 px-3 py-1 rounded-full text-slate-700">Processo: 2504642</span>
+              </div>
+              <h3 class="text-lg font-black text-slate-900 leading-tight">
+                Projeto “FORMANDO O CIDADÃO ATLETA!”
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed mt-2">
+                Aprovado pelo <strong>Ministério do Esporte</strong> sob o <strong>Processo nº 2504642</strong>, com valor global autorizado de <strong>R$ 353.095,11</strong>. O projeto visa custear integralmente a estrutura de treinamentos, materiais esportivos oficiais e participação em torneios para <strong>300 crianças e adolescentes (6 a 18 anos)</strong> de Braço do Norte.
+              </p>
+            </div>
+
+            <!-- 3 Core Action Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <!-- Ação 1 -->
+              <div class="bg-white p-4.5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
+                <div>
+                  <div class="w-9 h-9 rounded-xl bg-emerald-50 text-avbn-green flex items-center justify-center font-bold mb-3">
+                    <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                  </div>
+                  <div class="font-bold text-sm text-slate-900">Formação Integral</div>
+                  <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                    Aulas estruturadas no contraturno com acompanhamento pedagógico e valores de cidadania.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Ação 2 -->
+              <div class="bg-white p-4.5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
+                <div>
+                  <div class="w-9 h-9 rounded-xl bg-emerald-50 text-avbn-green flex items-center justify-center font-bold mb-3">
+                    <i data-lucide="volleyball" class="w-4 h-4"></i>
+                  </div>
+                  <div class="font-bold text-sm text-slate-900">Material Oficial</div>
+                  <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                    Bolas oficiais Mikasa, redes, uniformes completos de jogo e equipamentos de proteção.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Ação 3 -->
+              <div class="bg-white p-4.5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
+                <div>
+                  <div class="w-9 h-9 rounded-xl bg-emerald-50 text-avbn-green flex items-center justify-center font-bold mb-3">
+                    <i data-lucide="trophy" class="w-4 h-4"></i>
+                  </div>
+                  <div class="font-bold text-sm text-slate-900">Competições</div>
+                  <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                    Transporte, inscrição, arbitragem e alimentação para campeonatos em Santa Catarina.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column (5 cols): Photo + Budget Breakdown -->
+          <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+            <!-- Coaching Staff Real Photo - 100% COMPLETA, DESCOBERTA E SEM CORTES -->
+            <div class="bg-white p-3.5 sm:p-4 rounded-3xl border border-slate-200 shadow-sm flex flex-col group hover:border-emerald-300 transition">
+              <!-- Container da Foto: proporção 3:2 idêntica à foto original (1280x851), sem cortes e 100% nítida -->
+              <div onclick="openLightbox(4)" class="relative w-full aspect-[3/2] rounded-2xl overflow-hidden border border-slate-100 cursor-pointer shadow-xs group bg-slate-100">
+                <img src="assets/comissao_tecnica.jpeg" alt="Comissão Técnica AVBN" class="w-full h-full object-cover filter brightness-100 group-hover:scale-105 transition duration-500">
+                <!-- Hint flutuante no hover -->
+                <div class="absolute bottom-2.5 right-2.5 opacity-0 group-hover:opacity-100 transition-opacity bg-slate-950/85 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1.5 border border-white/20 shadow-md">
+                  <i data-lucide="maximize-2" class="w-3 h-3 text-avbn-lime"></i>
+                  <span>Tela cheia</span>
+                </div>
+              </div>
+              
+              <!-- Texto descritivo 100% fora da foto (Zero sobreposição escura / Total legibilidade) -->
+              <div class="pt-3 px-1 flex items-start justify-between gap-3">
+                <div class="flex-1">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-avbn-green"></span>
+                    <span class="text-[10px] font-extrabold uppercase tracking-wider text-avbn-darkGreen">Corpo Docente Registrado</span>
+                  </div>
+                  <h4 class="text-sm font-black text-slate-900 mt-0.5 leading-snug">Comissão Técnica Qualificada</h4>
+                  <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                    Professores e treinadores devidamente registrados no CREF, assegurando orientação técnica, tática e pedagógica para o desenvolvimento integral das alunas.
+                  </p>
+                </div>
+                <button onclick="openLightbox(4)" class="p-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-avbn-darkGreen border border-emerald-200 shrink-0 transition" title="Ampliar Foto">
+                  <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Budget Breakdown Summary -->
+            <div class="bg-white p-5 rounded-3xl border border-slate-200 space-y-3 shadow-xs">
+              <div class="flex justify-between items-center text-xs font-bold border-b border-slate-100 pb-2">
+                <span class="text-slate-600 uppercase">Destinação dos Recursos</span>
+                <span class="text-avbn-darkGreen font-mono font-bold">R$ 353.095,11</span>
+              </div>
+              <div class="space-y-2 text-xs">
+                <div class="flex justify-between text-slate-700">
+                  <span>Recursos Humanos Especializados</span>
+                  <span class="font-bold">48%</span>
+                </div>
+                <div class="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+                  <div class="bg-avbn-green h-full rounded-full" style="width: 48%"></div>
+                </div>
+
+                <div class="flex justify-between text-slate-700 pt-1">
+                  <span>Materiais Esportivos & Uniformes</span>
+                  <span class="font-bold">32%</span>
+                </div>
+                <div class="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+                  <div class="bg-emerald-500 h-full rounded-full" style="width: 32%"></div>
+                </div>
+
+                <div class="flex justify-between text-slate-700 pt-1">
+                  <span>Logística, Viagens & Torneios</span>
+                  <span class="font-bold">20%</span>
+                </div>
+                <div class="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+                  <div class="bg-avbn-lime h-full rounded-full" style="width: 20%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SEÇÃO 4: IMPACTO SOCIAL E ESPORTIVO
+         ======================================================================= -->
+    <section id="impacto" class="site-section w-full py-16 sm:py-24 bg-white border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-4 border-b border-slate-100">
+          <div>
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-avbn-darkGreen border border-emerald-200 text-xs font-bold uppercase tracking-wider mb-2">
+              <i data-lucide="heart" class="w-3.5 h-3.5 text-avbn-green"></i>
+              Resultados e Formação Humana
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Impacto Social & Conquistas Esportivas</h2>
+            <p class="text-sm text-slate-500 mt-1">Mais do que atletas, formamos cidadãos conscientes, éticos e preparados para a vida.</p>
+          </div>
+          <div class="text-xs text-slate-600 font-semibold bg-slate-100 px-3.5 py-1.5 rounded-full shrink-0">
+            Valores: Ética • Respeito • Disciplina • Superação
+          </div>
+        </div>
+
+        <!-- 4 Key Impact Metric Cards -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 text-center">
+            <div class="text-3xl sm:text-4xl font-athletic text-avbn-green">300</div>
+            <div class="text-xs font-bold text-slate-900 mt-1">Alunas Gratuitas</div>
+            <div class="text-[11px] text-slate-500">100% isentas de custos</div>
+          </div>
+          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 text-center">
+            <div class="text-3xl sm:text-4xl font-athletic text-avbn-green">100%</div>
+            <div class="text-xs font-bold text-slate-900 mt-1">Contraturno Escolar</div>
+            <div class="text-[11px] text-slate-500">Frequência e notas monitoradas</div>
+          </div>
+          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 text-center">
+            <div class="text-3xl sm:text-4xl font-athletic text-avbn-green">3</div>
+            <div class="text-xs font-bold text-slate-900 mt-1">Núcleos de Atendimento</div>
+            <div class="text-[11px] text-slate-500">Acesso descentralizado</div>
+          </div>
+          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 text-center">
+            <div class="text-3xl sm:text-4xl font-athletic text-avbn-green">+15</div>
+            <div class="text-xs font-bold text-slate-900 mt-1">Pódios e Troféus</div>
+            <div class="text-[11px] text-slate-500">Liga Catarinense e Copas</div>
+          </div>
+        </div>
+
+        <!-- 2 Columns: Social Pillars + Real Photo Blumen Cup Podium -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <!-- Left: Social & Educational Transformation -->
+          <div class="lg:col-span-6 space-y-4">
+            <div class="bg-avbn-mint p-6 rounded-3xl border border-emerald-200">
+              <h3 class="text-base font-black text-avbn-darkGreen flex items-center gap-2 mb-2">
+                <i data-lucide="shield-check" class="w-5 h-5 text-avbn-green"></i>
+                Desenvolvimento Integral da Criança e Adolescente
+              </h3>
+              <p class="text-sm text-slate-700 leading-relaxed">
+                O esporte é comprovadamente uma das mais eficazes ferramentas de proteção social contra a vulnerabilidade juvenil. Na AVBN, a exigência de boa frequência e rendimento escolar é critério para participação nas competições, gerando engajamento e disciplina.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-xs">
+              <h3 class="text-base font-black text-slate-900 flex items-center gap-2 mb-2">
+                <i data-lucide="medal" class="w-5 h-5 text-avbn-green"></i>
+                Representatividade Municipal e Regional
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                As equipes de rendimento da AVBN representam Braço do Norte em campeonatos de prestígio estadual, como a <strong>Liga Catarinense de Voleibol</strong>, a <strong>Blumen Cup</strong> e os <strong>Joguinhos Abertos de Santa Catarina</strong>, levando o nome da cidade e de seus apoiadores ao topo do pódio.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Podium Real Photo - PREENCHIMENTO TOTAL E SEM BARRAS PRETAS -->
+          <div class="lg:col-span-6 flex flex-col">
+            <div class="bg-white p-3.5 sm:p-4 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between h-full group hover:border-emerald-300 transition">
+              <!-- Container onde a foto preenche 100% do espaço (sem faixas pretas laterais) -->
+              <div onclick="openLightbox(2)" class="relative w-full aspect-[4/3] sm:aspect-[16/11] rounded-2xl overflow-hidden border border-slate-100 cursor-pointer shadow-xs group bg-slate-100">
+                <img src="assets/podio_medalhas.jpeg" alt="Atletas AVBN no Pódio com Medalhas" class="w-full h-full object-cover object-[center_38%] filter brightness-100 group-hover:scale-105 transition duration-500">
+                <div class="absolute bottom-2.5 right-2.5 opacity-0 group-hover:opacity-100 transition-opacity bg-slate-950/85 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1.5 border border-white/20 shadow-md">
+                  <i data-lucide="maximize-2" class="w-3 h-3 text-avbn-lime"></i>
+                  <span>Tela cheia</span>
+                </div>
+              </div>
+              <div class="pt-3 px-1 flex items-start justify-between gap-3">
+                <div class="flex-1">
+                  <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-100 text-avbn-darkGreen text-[10px] font-extrabold uppercase tracking-wider mb-1">
+                    <i data-lucide="trophy" class="w-3 h-3 text-avbn-green"></i>
+                    Pódio Blumen Cup & Liga SC
+                  </span>
+                  <h4 class="text-sm font-black text-slate-900 leading-snug">Orgulho para Braço do Norte e para os Patrocinadores</h4>
+                  <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                    Conquistas que coroam a dedicação diária de atletas e comissão técnica em campeonatos oficiais de Santa Catarina.
+                  </p>
+                </div>
+                <button onclick="openLightbox(2)" class="p-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-avbn-darkGreen border border-emerald-200 shrink-0 transition" title="Ampliar Foto">
+                  <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SEÇÃO 5: CONTRAPARTIDAS AO PATROCINADOR
+         ======================================================================= -->
+    <section id="contrapartidas" class="site-section w-full py-16 sm:py-24 bg-emerald-50/40 border-b border-emerald-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-4 border-b border-emerald-200/80">
+          <div>
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-avbn-darkGreen border border-emerald-200 text-xs font-bold uppercase tracking-wider mb-2">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-avbn-green"></i>
+              Retorno de Imagem e Marca
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Contrapartidas de Visibilidade aos Patrocinadores</h2>
+            <p class="text-sm text-slate-600 mt-1">Sua marca associada a valores nobres: saúde, juventude, superação e desenvolvimento social.</p>
+          </div>
+          <div class="text-xs font-bold text-avbn-darkGreen bg-white px-4 py-2 rounded-2xl border border-emerald-200 shadow-2xs shrink-0">
+            Exposição em Santa Catarina
+          </div>
+        </div>
+
+        <!-- 4 Deliverable Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <!-- 1. Uniformes -->
+          <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-xs flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-2xl bg-emerald-50 text-avbn-green flex items-center justify-center font-bold mb-4">
+                <i data-lucide="shirt" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-black text-base text-slate-900 mb-1.5">Uniformes Oficiais</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Logomarca estampada em destaque nos uniformes de jogo, viagem e treino das 300 atletas em todas as competições.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-bold text-avbn-green">
+              Visibilidade Direta em Quadra
+            </div>
+          </div>
+
+          <!-- 2. Banners nos Ginásios -->
+          <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-xs flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-2xl bg-emerald-50 text-avbn-green flex items-center justify-center font-bold mb-4">
+                <i data-lucide="flag" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-black text-base text-slate-900 mb-1.5">Banners & Arenas</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Banners físicos e wind-banners nos ginásios durante os treinamentos diários e eventos esportivos sediados na cidade.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-bold text-avbn-green">
+              Público Local e Regional
+            </div>
+          </div>
+
+          <!-- 3. Redes Sociais & Mídia -->
+          <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-xs flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-2xl bg-emerald-50 text-avbn-green flex items-center justify-center font-bold mb-4">
+                <i data-lucide="share-2" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-black text-base text-slate-900 mb-1.5">Mídia Digital</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Menção em posts de resultados, transmissões ao vivo, reels e agradecimentos institucionais nas redes oficiais da AVBN.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-bold text-avbn-green">
+              Alcance Orgânico Forte
+            </div>
+          </div>
+
+          <!-- 4. Relatório Fotográfico -->
+          <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-xs flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-2xl bg-emerald-50 text-avbn-green flex items-center justify-center font-bold mb-4">
+                <i data-lucide="file-text" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-black text-base text-slate-900 mb-1.5">Relatório Oficial</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Entrega de clipping fotográfico periódico e relatório de prestação de contas comprovando todas as inserções da sua marca.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-bold text-avbn-green">
+              Segurança e Conformidade
+            </div>
+          </div>
+        </div>
+
+        <!-- Banner with Photo + Strong Closing Quote -->
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-center gap-6">
+          <div class="w-full md:w-1/3 rounded-2xl overflow-hidden aspect-video relative shrink-0">
+            <img src="assets/competicao_banners.jpeg" alt="Banners em quadra" class="w-full h-full object-cover">
+          </div>
+          <div class="flex-1">
+            <span class="text-xs font-bold text-avbn-green uppercase tracking-wider">Compromisso com o Patrocinador</span>
+            <p class="text-base sm:text-lg font-athletic text-slate-900 tracking-wide mt-1 leading-snug">
+              “Sua empresa investe onde o impacto acontece: <span class="text-avbn-green">dentro das quadras, na formação de cidadãos e no futuro da nossa comunidade.”</span>
+            </p>
+            <p class="text-xs text-slate-500 mt-2">
+              Proposta aberta para personalização de cotas e ativações especiais conforme a estratégia corporativa da sua marca.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SEÇÃO 6: SEGURANÇA JURÍDICA E TRANSPARÊNCIA
+         ======================================================================= -->
+    <section id="transparencia" class="site-section w-full py-16 sm:py-24 bg-white border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-4 border-b border-slate-100">
+          <div>
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-avbn-darkGreen border border-emerald-200 text-xs font-bold uppercase tracking-wider mb-2">
+              <i data-lucide="scale" class="w-3.5 h-3.5 text-avbn-green"></i>
+              Conformidade Legal e Fiscal
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Segurança Jurídica & Transparência Total</h2>
+            <p class="text-sm text-slate-500 mt-1">Mecanismo oficial com chancela da Receita Federal e fiscalização direta do Ministério do Esporte.</p>
+          </div>
+          <div class="bg-slate-100 px-3.5 py-1.5 rounded-full text-xs font-bold text-slate-700 shrink-0">
+            Auditoria Pública Regular
+          </div>
+        </div>
+
+        <!-- 4 Pillars Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <!-- Pilar 1 -->
+          <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200">
+            <div class="w-10 h-10 rounded-2xl bg-emerald-100 text-avbn-darkGreen flex items-center justify-center font-bold mb-4">
+              <i data-lucide="book-open" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-black text-base text-slate-900 mb-1">Marco Regulatório</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Regido pela <strong>Lei Federal nº 11.438/2006</strong> e Decreto nº 6.180/2007. Marco histórico consolidado com quase duas décadas de plena vigência no Brasil.
+            </p>
+          </div>
+
+          <!-- Pilar 2 -->
+          <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200">
+            <div class="w-10 h-10 rounded-2xl bg-emerald-100 text-avbn-darkGreen flex items-center justify-center font-bold mb-4">
+              <i data-lucide="landmark" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-black text-base text-slate-900 mb-1">Conta Vinculada</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Recursos depositados diretamente em conta bancária oficial bloqueada no <strong>Banco do Brasil</strong>, aberta e monitorada pelo Ministério do Esporte.
+            </p>
+          </div>
+
+          <!-- Pilar 3 -->
+          <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200">
+            <div class="w-10 h-10 rounded-2xl bg-emerald-100 text-avbn-darkGreen flex items-center justify-center font-bold mb-4">
+              <i data-lucide="percent" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-black text-base text-slate-900 mb-1">Teto Ampliado (2%)</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              O Art. 18 da <strong>Lei nº 14.439/2022</strong> ampliou o limite de dedução de pessoas jurídicas de 1% para <strong>até 2% do IRPJ devido</strong>.
+            </p>
+          </div>
+
+          <!-- Pilar 4 -->
+          <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200">
+            <div class="w-10 h-10 rounded-2xl bg-emerald-100 text-avbn-darkGreen flex items-center justify-center font-bold mb-4">
+              <i data-lucide="check-check" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-black text-base text-slate-900 mb-1">Recibo de Mecenato</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Comprovante oficial emitido pelo Governo Federal que confere à empresa total quitação fiscal e dedução direta na apuração do imposto.
+            </p>
+          </div>
+        </div>
+
+        <!-- Compliance Checklist Banner -->
+        <div class="bg-avbn-mint p-6 rounded-3xl border border-emerald-200 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-1">
+            <h4 class="text-sm font-black text-avbn-darkGreen uppercase tracking-wider">Garantia de Idoneidade e Conformidade</h4>
+            <p class="text-xs text-slate-700 leading-relaxed max-w-2xl">
+              A AVBN possui certidões negativas federais, estaduais e municipais vigentes, além de prestação de contas pública e assessoria contábil especializada para dar suporte à equipe da sua empresa.
+            </p>
+          </div>
+          <a href="#como-participar" class="px-5 py-2.5 rounded-xl bg-avbn-green hover:bg-emerald-700 text-white font-bold text-xs shrink-0 transition shadow-sm">
+            Ver Fluxo de Adesão
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SEÇÃO 7: COMO PARTICIPAR (PASSO A PASSO)
+         ======================================================================= -->
+    <section id="como-participar" class="site-section w-full py-16 sm:py-24 bg-slate-50 border-b border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-4 border-b border-slate-200">
+          <div>
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-avbn-darkGreen border border-emerald-200 text-xs font-bold uppercase tracking-wider mb-2">
+              <i data-lucide="list-ordered" class="w-3.5 h-3.5 text-avbn-green"></i>
+              Passo a Passo Simples
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Como Participar • Guia Prático para a Empresa</h2>
+            <p class="text-sm text-slate-600 mt-1">4 etapas transparentes para transformar imposto devido em investimento no esporte de base.</p>
+          </div>
+          <button onclick="openModal('simulatorModal')" class="bg-avbn-green hover:bg-emerald-700 text-white px-4 py-2 rounded-2xl text-xs font-bold transition flex items-center gap-2 shadow-xs shrink-0">
+            <i data-lucide="calculator" class="w-4 h-4"></i>
+            Simular Valor da Empresa
+          </button>
+        </div>
+
+        <!-- 4 Step Cards Flow -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+          <!-- Passo 1 -->
+          <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-xs flex flex-col justify-between relative group hover:border-emerald-400 transition">
+            <div class="w-8 h-8 rounded-full bg-avbn-green text-white flex items-center justify-center font-athletic text-base font-bold mb-4">1</div>
+            <div>
+              <h3 class="font-black text-base text-slate-900 mb-1.5">Cálculo da Destinação</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                A contabilidade da sua empresa (tributada em <strong>Lucro Real</strong>) estima o imposto devido e define até <strong>2%</strong> para aporte sem custos extras.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-400">Etapa Contábil</div>
+          </div>
+
+          <!-- Passo 2 -->
+          <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-xs flex flex-col justify-between relative group hover:border-emerald-400 transition">
+            <div class="w-8 h-8 rounded-full bg-avbn-green text-white flex items-center justify-center font-athletic text-base font-bold mb-4">2</div>
+            <div>
+              <h3 class="font-black text-base text-slate-900 mb-1.5">Termo & Dados Bancários</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                A AVBN formaliza o <strong>Termo de Compromisso de Patrocínio</strong> com as contrapartidas e disponibiliza os dados da conta vinculada no Banco do Brasil.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-400">Formalização Jurídica</div>
+          </div>
+
+          <!-- Passo 3 -->
+          <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-xs flex flex-col justify-between relative group hover:border-emerald-400 transition">
+            <div class="w-8 h-8 rounded-full bg-avbn-green text-white flex items-center justify-center font-athletic text-base font-bold mb-4">3</div>
+            <div>
+              <h3 class="font-black text-base text-slate-900 mb-1.5">Depósito Identificado</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                A empresa efetua o depósito identificado diretamente na conta do projeto no <strong>Banco do Brasil</strong> até o último dia útil do período fiscal.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-400">Aporte Direto</div>
+          </div>
+
+          <!-- Passo 4 -->
+          <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-xs flex flex-col justify-between relative group hover:border-emerald-400 transition">
+            <div class="w-8 h-8 rounded-full bg-avbn-green text-white flex items-center justify-center font-athletic text-base font-bold mb-4">4</div>
+            <div>
+              <h3 class="font-black text-base text-slate-900 mb-1.5">Recibo de Mecenato</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                O Ministério do Esporte emite o <strong>Recibo de Mecenato</strong>, permitindo que a empresa abata <strong>100%</strong> do valor no seu DARF de IRPJ.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-400">100% Compensado</div>
+          </div>
+        </div>
+
+        <!-- Comparative Comparison Box (Com a Lei vs Sem a Lei) -->
+        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
+          <div class="text-center max-w-xl mx-auto mb-6">
+            <h3 class="text-lg font-black text-slate-900">Exemplo Comparativo: Onde Seu Tributo Tem Mais Valor?</h3>
+            <p class="text-xs text-slate-500 mt-1">Exemplo com empresa que tem R$ 500.000 de IRPJ devido apurado no ano:</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Cenário 1: Sem Incentivo -->
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="flex items-center gap-2 text-rose-600 font-bold text-xs uppercase tracking-wider mb-2">
+                <i data-lucide="x-circle" class="w-4 h-4"></i>
+                Cenário 1: Sem Utilizar a Lei
+              </div>
+              <div class="text-2xl font-athletic text-slate-900">Paga R$ 500.000 ao Governo</div>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                O valor vai 100% para o caixa único da União em Brasília. A empresa não obtém retorno institucional, contrapartidas de imagem e <strong>nenhum centavo fica na comunidade local</strong>.
+              </p>
+            </div>
+
+            <!-- Cenário 2: Com Incentivo -->
+            <div class="p-5 rounded-2xl bg-avbn-mint border border-emerald-300">
+              <div class="flex items-center gap-2 text-avbn-darkGreen font-bold text-xs uppercase tracking-wider mb-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-avbn-green"></i>
+                Cenário 2: Destinando ao Vôlei BN (2%)
+              </div>
+              <div class="text-2xl font-athletic text-avbn-green">Destina R$ 10.000 ao Projeto</div>
+              <p class="text-xs text-slate-700 mt-2 leading-relaxed">
+                A empresa paga R$ 490.000 de IRPJ e destina R$ 10.000 à AVBN. <strong>Custo adicional R$ 0,00</strong>. Sua marca ganha enorme visibilidade e transforma a vida de 300 crianças em Braço do Norte!
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SEÇÃO 8: GALERIA OFICIAL (ESTRUTURA REFERÊNCIA 3 CARDS)
+         ======================================================================= -->
+    <section id="galeria" class="site-section w-full py-16 sm:py-24 bg-white border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-4 border-b border-slate-100">
+          <div>
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-avbn-darkGreen border border-emerald-200 text-xs font-bold uppercase tracking-wider mb-2">
+              <i data-lucide="camera" class="w-3.5 h-3.5 text-avbn-green"></i>
+              Acervo Fotográfico Oficial
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Galeria • Vôlei BN em Ação</h2>
+            <p class="text-sm text-slate-500 mt-1">Registros reais das mais de 300 crianças e adolescentes atendidas pela AVBN.</p>
+          </div>
+          <div class="flex items-center gap-2 bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-full text-xs font-semibold shrink-0">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-avbn-green"></i>
+            Braço do Norte / SC • Registros Reais
+          </div>
+        </div>
+
+        <!-- Centered Main Title (Fiel à Referência) -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <h3 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+            Nossa Atuação em Quadra: Formação, Treinos e Conquistas
+          </h3>
+          <p class="text-sm text-slate-600 mt-2">
+            Acompanhe a rotina de treinos, o desenvolvimento técnico e a energia das atletas de Braço do Norte em competições municipais e estaduais.
+          </p>
+        </div>
+
+        <!-- 3 Featured Cards Grid (Fiel à Referência: Cantos arredondados, Overlay Escuro e Botão Verde com Seta ↗) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-center mb-10">
+          
+          <!-- Card 1: Núcleos & Formação (Base) -->
+          <div onclick="openLightbox(10)" class="relative rounded-3xl overflow-hidden shadow-md group border border-slate-200 h-[340px] sm:h-[380px] flex flex-col justify-end cursor-pointer">
+            <img src="assets/time_ginasio.jpeg" alt="Treinamento e Formação AVBN" class="absolute inset-0 w-full h-full object-cover filter brightness-95 group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent"></div>
+            
+            <!-- Bottom Glassmorphic Overlay Badge -->
+            <div class="relative z-10 m-4 p-4 rounded-2xl bg-slate-950/75 backdrop-blur-md border border-white/15 flex items-center justify-between text-white transition group-hover:bg-slate-950/90">
+              <div class="overflow-hidden pr-2">
+                <div class="text-[10px] uppercase tracking-wider text-avbn-lime font-bold">NÚCLEOS & FORMAÇÃO</div>
+                <div class="text-sm sm:text-base font-black text-white leading-tight truncate">Treinos e Iniciação</div>
+                <div class="text-[11px] text-slate-300 truncate">3 núcleos ativos • Clique para tela cheia</div>
+              </div>
+              <button class="w-10 h-10 rounded-full bg-emerald-500 hover:bg-avbn-lime text-slate-950 flex items-center justify-center font-bold shadow-md transition group-hover:scale-110 shrink-0" title="Ver foto em tela cheia">
+                <i data-lucide="maximize-2" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2: Alto Rendimento & Conquistas (Centro em Destaque / Levemente Elevado) -->
+          <div onclick="openLightbox(2)" class="relative rounded-3xl overflow-hidden shadow-xl group border-2 border-emerald-500/50 h-[360px] sm:h-[410px] flex flex-col justify-between transform md:-translate-y-2 cursor-pointer">
+            <img src="assets/podio_medalhas.jpeg" alt="Pódio e Conquistas Estaduais" class="absolute inset-0 w-full h-full object-cover filter brightness-100 group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/35 to-transparent"></div>
+            
+            <!-- Top Featured Pill -->
+            <div class="relative z-10 p-4 flex justify-start">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-avbn-green text-white text-xs font-bold shadow-md border border-emerald-400/40">
+                <i data-lucide="trophy" class="w-3.5 h-3.5 text-avbn-lime"></i>
+                Pódio Blumen Cup & Liga SC
+              </span>
+            </div>
+
+            <!-- Bottom Glassmorphic Overlay Badge -->
+            <div class="relative z-10 m-4 p-4 rounded-2xl bg-slate-950/80 backdrop-blur-md border border-white/20 flex items-center justify-between text-white transition group-hover:bg-slate-950/95">
+              <div class="overflow-hidden pr-2">
+                <div class="text-[10px] uppercase tracking-wider text-avbn-lime font-extrabold">ALTO RENDIMENTO</div>
+                <div class="text-sm sm:text-base font-black text-white leading-tight truncate">Competições & Títulos</div>
+                <div class="text-[11px] text-slate-300 truncate">Representando Braço do Norte em SC</div>
+              </div>
+              <button class="w-10 h-10 rounded-full bg-emerald-400 hover:bg-avbn-lime text-slate-950 flex items-center justify-center font-bold shadow-lg transition group-hover:scale-110 shrink-0" title="Ver foto em tela cheia">
+                <i data-lucide="maximize-2" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3: Visibilidade & Marcas -->
+          <div onclick="openLightbox(3)" class="relative rounded-3xl overflow-hidden shadow-md group border border-slate-200 h-[340px] sm:h-[380px] flex flex-col justify-end cursor-pointer">
+            <img src="assets/celebracao_patrocinio.jpeg" alt="Patrocinadores e Ativações" class="absolute inset-0 w-full h-full object-cover filter brightness-95 group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent"></div>
+            
+            <!-- Bottom Glassmorphic Overlay Badge -->
+            <div class="relative z-10 m-4 p-4 rounded-2xl bg-slate-950/75 backdrop-blur-md border border-white/15 flex items-center justify-between text-white transition group-hover:bg-slate-950/90">
+              <div class="overflow-hidden pr-2">
+                <div class="text-[10px] uppercase tracking-wider text-avbn-lime font-bold">VISIBILIDADE & MARCAS</div>
+                <div class="text-sm sm:text-base font-black text-white leading-tight truncate">Eventos & Patrocinadores</div>
+                <div class="text-[11px] text-slate-300 truncate">Uniformes, banners e arena oficial</div>
+              </div>
+              <button class="w-10 h-10 rounded-full bg-emerald-500 hover:bg-avbn-lime text-slate-950 flex items-center justify-center font-bold shadow-md transition group-hover:scale-110 shrink-0" title="Ver foto em tela cheia">
+                <i data-lucide="maximize-2" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Centered Full Gallery Button -->
+        <div class="text-center">
+          <button onclick="openModal('galleryModal')" class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-emerald-50 hover:bg-emerald-100 text-avbn-darkGreen font-bold text-xs border border-emerald-200 shadow-xs transition">
+            <i data-lucide="images" class="w-4 h-4 text-avbn-green"></i>
+            <span>Ver Acervo Fotográfico Digital Completo (17 Registros Reais)</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SEÇÃO 9: CONTATO DIRETO & CENTRAL DO PATROCINADOR (NO FINAL EM DESTAQUE)
+         ======================================================================= -->
+    <section id="contato" class="site-section w-full py-16 sm:py-24 bg-gradient-to-b from-slate-900 via-emerald-950 to-slate-950 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-4 border-b border-white/10">
+          <div>
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs font-bold uppercase tracking-wider mb-2">
+              <i data-lucide="phone-call" class="w-3.5 h-3.5 text-avbn-lime"></i>
+              Atendimento aos Patrocinadores
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Canais de Contato & Central do Patrocinador</h2>
+            <p class="text-sm text-slate-300 mt-1">Fale diretamente com nossa diretoria e acesse todas as ferramentas de adesão.</p>
+          </div>
+          <div class="text-xs text-slate-300 font-medium shrink-0">
+            Braço do Norte / SC • Atendimento Exclusivo
+          </div>
+        </div>
+
+        <!-- ========================================================
+             DESTAQUE PRINCIPAL NO FINAL: CENTRAL DE AÇÕES DO PATROCINADOR
+             (Transfere os botões de ação em alto destaque visual)
+             ======================================================== -->
+        <div class="bg-slate-950/80 backdrop-blur-md p-6 sm:p-8 rounded-3xl text-white shadow-2xl border border-emerald-500/40 mb-12">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 pb-4 border-b border-white/10">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-2xl bg-avbn-lime text-slate-950 flex items-center justify-center font-bold shadow-md">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-[11px] uppercase tracking-wider text-avbn-lime font-extrabold">DESTAQUE • FERRAMENTAS DO PATROCINADOR</span>
+                <div class="text-base sm:text-lg font-black text-white leading-tight">Ações Interativas para Decisão da Empresa</div>
+              </div>
+            </div>
+            <span class="inline-block text-xs font-bold px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 w-fit">
+              100% Dedutível no IRPJ (Lucro Real)
+            </span>
+          </div>
+
+          <!-- 4 Action Cards in Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- 1. Simulador IR -->
+            <button onclick="openModal('simulatorModal')" class="bg-white/10 hover:bg-white/20 border border-white/15 p-4 rounded-2xl text-left transition flex flex-col justify-between group shadow-sm">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-9 h-9 rounded-xl bg-avbn-lime text-slate-950 flex items-center justify-center font-bold">
+                  <i data-lucide="calculator" class="w-4 h-4"></i>
+                </div>
+                <span class="text-avbn-lime text-sm font-bold group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition">↗</span>
+              </div>
+              <div>
+                <div class="text-sm font-bold text-white group-hover:text-avbn-lime transition">Simulador do IR</div>
+                <div class="text-xs text-slate-300 mt-0.5">Calcule o teto de 2% do IRPJ da sua empresa</div>
+              </div>
+            </button>
+
+            <!-- 2. Gerar PDF -->
+            <button onclick="window.print()" class="bg-white/10 hover:bg-white/20 border border-white/15 p-4 rounded-2xl text-left transition flex flex-col justify-between group shadow-sm">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-9 h-9 rounded-xl bg-emerald-400 text-slate-950 flex items-center justify-center font-bold">
+                  <i data-lucide="printer" class="w-4 h-4"></i>
+                </div>
+                <span class="text-emerald-300 text-sm font-bold group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition">↗</span>
+              </div>
+              <div>
+                <div class="text-sm font-bold text-white group-hover:text-emerald-300 transition">Gerar PDF Oficial</div>
+                <div class="text-xs text-slate-300 mt-0.5">Versão formatada para conselho e diretoria</div>
+              </div>
+            </button>
+
+            <!-- 3. Fotos Reais -->
+            <button onclick="openModal('galleryModal')" class="bg-white/10 hover:bg-white/20 border border-white/15 p-4 rounded-2xl text-left transition flex flex-col justify-between group shadow-sm">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-9 h-9 rounded-xl bg-sky-400 text-slate-950 flex items-center justify-center font-bold">
+                  <i data-lucide="images" class="w-4 h-4"></i>
+                </div>
+                <span class="text-sky-300 text-sm font-bold group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition">↗</span>
+              </div>
+              <div>
+                <div class="text-sm font-bold text-white group-hover:text-sky-300 transition">Galeria Completa</div>
+                <div class="text-xs text-slate-300 mt-0.5">17 fotos em alta resolução de jogos e treinos</div>
+              </div>
+            </button>
+
+            <!-- 4. Personalizar Proposta -->
+            <button onclick="openModal('customizerModal')" class="bg-white/10 hover:bg-white/20 border border-white/15 p-4 rounded-2xl text-left transition flex flex-col justify-between group shadow-sm">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-9 h-9 rounded-xl bg-amber-400 text-slate-950 flex items-center justify-center font-bold">
+                  <i data-lucide="sliders" class="w-4 h-4"></i>
+                </div>
+                <span class="text-amber-300 text-sm font-bold group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition">↗</span>
+              </div>
+              <div>
+                <div class="text-sm font-bold text-white group-hover:text-amber-300 transition">Personalizar Deck</div>
+                <div class="text-xs text-slate-300 mt-0.5">Insira o nome da sua empresa na capa</div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Contact Channels & Video QR Code Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-10">
+          
+          <!-- Left Column: Contact Cards (7 cols) -->
+          <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+            <!-- Organization Card com Logo Oficial -->
+            <div class="bg-white/10 backdrop-blur-md p-4 sm:p-5 rounded-3xl border border-white/15 shadow-sm flex items-center gap-4">
+              <div class="w-14 h-14 flex items-center justify-center p-2 rounded-2xl bg-white/15 border border-white/20 shrink-0">
+                <img src="assets/logo.png" alt="AVBN Logo" class="w-full h-full object-contain">
+              </div>
+              <div class="overflow-hidden">
+                <h3 class="text-base font-black text-white leading-tight">Associação de Vôlei BN (AVBN)</h3>
+                <p class="text-xs text-slate-300 font-medium mt-0.5">Entidade Proponente • Projeto nº 2504642 • Braço do Norte / SC</p>
+                <p class="text-xs text-slate-400 mt-0.5 truncate">Ginásio Atílio Ghisi (Núcleo Centro) • Treinamentos e Formação Esportiva</p>
+              </div>
+            </div>
+
+            <!-- Contact Channels Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <!-- WhatsApp / Phone -->
+              <a id="contactPhoneLink" href="https://wa.me/5548999990000?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20apoio%20ao%20Projeto%20Vôlei%20AVBN" target="_blank" class="bg-white/10 hover:bg-white/20 p-4 rounded-2xl border border-white/15 flex items-center gap-3 transition shadow-xs group">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center shrink-0 border border-emerald-500/30 group-hover:scale-105 transition">
+                  <svg class="w-5 h-5 text-emerald-400" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                </div>
+                <div class="overflow-hidden">
+                  <div class="text-[10px] uppercase font-bold text-slate-400">Telefone / WhatsApp</div>
+                  <div id="contactPhoneDisplay" class="text-sm font-bold text-white truncate">(48) 99999-0000</div>
+                  <div class="text-[11px] text-emerald-400 font-semibold">Toque para conversar</div>
+                </div>
+              </a>
+
+              <!-- E-mail -->
+              <a id="contactEmailLink" href="mailto:contato@voleibn.org.br?subject=Apoio%20ao%20Projeto%20Vôlei%20AVBN" class="bg-white/10 hover:bg-white/20 p-4 rounded-2xl border border-white/15 flex items-center gap-3 transition shadow-xs group">
+                <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-300 flex items-center justify-center shrink-0 border border-sky-500/30 group-hover:scale-105 transition">
+                  <svg class="w-5 h-5 text-sky-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="16" x="2" y="4" rx="2"/>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                  </svg>
+                </div>
+                <div class="overflow-hidden">
+                  <div class="text-[10px] uppercase font-bold text-slate-400">E-mail Oficial</div>
+                  <div id="contactEmailDisplay" class="text-sm font-bold text-white truncate">contato@voleibn.org.br</div>
+                  <div class="text-[11px] text-sky-400 font-semibold">Envio de propostas e docs</div>
+                </div>
+              </a>
+
+              <!-- Instagram / Social Media Oficial (Sólido, vibrante e 100% visível) -->
+              <a id="contactInstaLink" href="https://instagram.com/voleibn" target="_blank" class="bg-white/10 hover:bg-white/20 p-4 rounded-2xl border border-white/15 flex items-center gap-3 transition shadow-xs group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition border border-white/20">
+                  <svg class="w-5 h-5 fill-white" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </div>
+                <div class="overflow-hidden">
+                  <div class="text-[10px] uppercase font-bold text-slate-400">Redes Sociais</div>
+                  <div id="contactInstaDisplay" class="text-sm font-bold text-white truncate">@voleibn</div>
+                  <div class="text-[11px] text-pink-300 font-semibold">Fotos e jogos em tempo real</div>
+                </div>
+              </a>
+
+              <!-- Municipality / Partners -->
+              <div class="bg-white/10 p-4 rounded-2xl border border-white/15 flex items-center gap-3 shadow-xs">
+                <div class="w-10 h-10 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center shrink-0 border border-white/10">
+                  <i data-lucide="landmark" class="w-5 h-5"></i>
+                </div>
+                <div class="overflow-hidden">
+                  <div class="text-[10px] uppercase font-bold text-slate-400">Apoio Institucional</div>
+                  <div class="text-sm font-bold text-white truncate">Prefeitura de Braço do Norte</div>
+                  <div class="text-[11px] text-slate-300">DME • Comissão de Esportes</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: QR Code + Video (5 cols) -->
+          <div class="lg:col-span-5 flex flex-col">
+            <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/15 flex flex-col items-center justify-between text-center flex-1 shadow-sm">
+              <div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold border border-emerald-500/30 mb-2">
+                  <i data-lucide="play-circle" class="w-4 h-4 text-avbn-lime"></i>
+                  Vídeo Institucional
+                </span>
+                <h4 class="text-sm font-bold text-white">Conheça o Projeto em Vídeo</h4>
+                <p class="text-xs text-slate-300 max-w-xs mx-auto mt-1">
+                  Aponte a câmera do celular para o QR Code abaixo para assistir às nossas atletas em quadra:
+                </p>
+              </div>
+
+              <!-- QR Code Container -->
+              <div class="my-4 p-3 bg-white rounded-2xl shadow-md border border-white/20 flex items-center justify-center">
+                <div id="qrcodeVideo" class="w-[100px] h-[100px]"></div>
+              </div>
+
+              <div class="text-xs text-slate-300 font-medium">
+                <span class="text-avbn-lime font-bold">Apresentação Presencial:</span> Nossa equipe técnica está à disposição para visitar sua empresa em Braço do Norte e região.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Grand Closing Quote Banner -->
+        <div class="p-6 rounded-3xl bg-gradient-to-r from-avbn-darkGreen to-avbn-green text-white text-center shadow-xl border border-white/15">
+          <p class="text-xl sm:text-2xl font-athletic tracking-wide leading-snug">
+            “O VOLEIBOL TRANSFORMA VIDAS! INVISTA NO FUTURO.<br class="hidden sm:inline">
+            <span class="text-avbn-lime">
+              APOIE O VÔLEI BN ATRAVÉS DA LEI DE INCENTIVO AO ESPORTE.”
+            </span>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       FOOTER PROFISSIONAL DE SITE
+       ========================================================================= -->
+  <footer class="no-print bg-slate-950 text-slate-400 border-t border-white/10 py-12 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="AVBN" class="w-10 h-10 object-contain">
+        <div>
+          <div class="text-sm font-bold text-white">Associação de Vôlei BN (AVBN)</div>
+          <div class="text-xs text-slate-500">CNPJ e Estatuto Social Regulares • Braço do Norte / Santa Catarina</div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="https://instagram.com/voleibn" target="_blank" class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-white/10 hover:border-pink-500/50 text-white transition text-xs font-semibold group" title="Siga no Instagram">
+          <span class="w-6 h-6 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition">
+            <svg class="w-3.5 h-3.5 fill-white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </span>
+          <span class="text-slate-300 group-hover:text-white">@voleibn</span>
+        </a>
+      </div>
+
+      <div class="text-xs text-slate-500 text-center md:text-right">
+        <div>Projeto Aprovado sob nº <strong>2504642</strong> • Lei Federal de Incentivo ao Esporte (Lei nº 11.438/2006)</div>
+        <div class="mt-1">© 2026 Associação de Vôlei BN. Todos os direitos reservados.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODAL: GALERIA DE FOTOS REAIS DA AVBN (THUMBNAILS COMPLETAS SEM CORTES)
+       ========================================================================= -->
+  <div id="galleryModal" class="no-print fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-sm hidden items-center justify-center p-3 sm:p-6">
+    <div class="bg-white border border-slate-200 rounded-3xl max-w-5xl w-full p-4 sm:p-6 shadow-2xl relative max-h-[92vh] flex flex-col">
+      <button onclick="closeModal('galleryModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-2 rounded-xl bg-slate-100 hover:bg-slate-200 transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-xl bg-emerald-50 text-avbn-green flex items-center justify-center border border-emerald-100 font-bold shrink-0">
+          <i data-lucide="images" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h3 class="text-base sm:text-lg font-black text-slate-900">Galeria de Fotos Oficiais • AVBN</h3>
+          <p class="text-xs text-slate-500">17 registros reais completos (sem cortes) • Toque em qualquer foto para abrir em tela cheia com navegação por arrasto</p>
+        </div>
+      </div>
+
+      <!-- Gallery Grid (17 Fotos Completas com object-contain) -->
+      <div id="galleryModalGrid" class="flex-1 overflow-y-auto pr-1 sm:pr-2 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2.5 sm:gap-3.5">
+        <!-- Renderizado dinamicamente via renderGalleryGrid() -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL: LIGHTBOX TELA CHEIA (COM NAVEGAÇÃO POR ARRASTO / TOUCH & DRAG)
+       ========================================================================= -->
+  <div id="lightboxModal" class="no-print fixed inset-0 z-[100] bg-slate-950/95 backdrop-blur-md hidden flex-col justify-between select-none">
+    
+    <!-- Top Bar: Counter + Title + Close Button -->
+    <div class="p-3 sm:p-5 flex items-center justify-between text-white z-20 border-b border-white/10">
+      <div class="flex items-center gap-3">
+        <span id="lightboxCounter" class="px-3 py-1 rounded-full bg-emerald-500/20 text-avbn-lime border border-emerald-500/40 text-xs font-bold font-mono">1 / 17</span>
+        <div>
+          <h4 id="lightboxTitle" class="text-xs sm:text-base font-bold text-white leading-tight">Atletas AVBN em Quadra</h4>
+          <p id="lightboxDesc" class="text-[11px] sm:text-xs text-slate-300 hidden sm:block">Alunas dos núcleos sociais com bolas oficiais Mikasa no Ginásio Municipal.</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button onclick="closeLightbox()" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition" title="Fechar (Esc)">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Center: Main Image Container with Touch & Drag support -->
+    <div id="lightboxImgContainer" class="relative flex-1 flex items-center justify-center overflow-hidden p-2 sm:p-6 cursor-grab active:cursor-grabbing">
+      <!-- Left Prev Button -->
+      <button onclick="prevLightboxPhoto(event)" class="absolute left-2 sm:left-6 z-20 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-slate-900/80 hover:bg-avbn-green text-white border border-white/20 flex items-center justify-center transition shadow-2xl backdrop-blur-md hover:scale-105" title="Foto Anterior (Seta Esquerda)">
+        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+      </button>
+
+      <!-- Main Image (object-contain so 100% of the photo is completely visible, never cropped!) -->
+      <img id="lightboxImg" src="assets/hero_bolas.jpeg" alt="Foto Galeria AVBN" class="max-h-[72vh] sm:max-h-[76vh] max-w-[94vw] object-contain rounded-2xl shadow-2xl transition-transform duration-200 select-none pointer-events-none">
+
+      <!-- Right Next Button -->
+      <button onclick="nextLightboxPhoto(event)" class="absolute right-2 sm:right-6 z-20 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-slate-900/80 hover:bg-avbn-green text-white border border-white/20 flex items-center justify-center transition shadow-2xl backdrop-blur-md hover:scale-105" title="Próxima Foto (Seta Direita)">
+        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Bottom Bar: Drag/Swipe Hint + Scrollable Thumbnail Strip -->
+    <div class="p-3 sm:p-4 z-20 flex flex-col items-center gap-2 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent border-t border-white/10">
+      <div class="text-[11px] text-slate-400 flex items-center gap-2">
+        <i data-lucide="move-horizontal" class="w-3.5 h-3.5 text-avbn-lime"></i>
+        <span>Arraste com o dedo ou mouse para navegar entre as fotos</span>
+      </div>
+
+      <!-- Thumbnails Strip -->
+      <div id="lightboxThumbStrip" class="flex items-center gap-2 overflow-x-auto max-w-full py-1 px-2">
+        <!-- Renderizado dinamicamente -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL: SIMULADOR DE DESTINAÇÃO DO IMPOSTO DE RENDA (NO-PRINT)
+       ========================================================================= -->
+  <div id="simulatorModal" class="no-print fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white border border-slate-200 rounded-3xl max-w-lg w-full p-6 shadow-2xl relative">
+      <button onclick="closeModal('simulatorModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1.5 rounded-xl bg-slate-100">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-xl bg-emerald-50 text-avbn-green flex items-center justify-center border border-emerald-100 font-bold">
+          <i data-lucide="calculator" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h3 class="text-base font-bold text-slate-900">Simulador Fiscal • Lei de Incentivo</h3>
+          <p class="text-xs text-slate-500">Calcule a destinação fiscal permitida para sua empresa (Lucro Real)</p>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1.5">
+            Imposto de Renda Anual Devido Estimado (IRPJ da Empresa):
+          </label>
+          <div class="relative">
+            <span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm font-semibold">R$</span>
+            <input type="number" id="simIrpjInput" value="500000" step="50000" class="w-full bg-slate-50 border border-slate-300 rounded-xl py-2.5 pl-10 pr-4 text-slate-900 text-sm focus:outline-none focus:border-avbn-green" oninput="calculateTaxSimulation()">
+          </div>
+          <p class="text-[11px] text-slate-500 mt-1">Ex: R$ 500.000,00 de IRPJ apurado no período.</p>
+        </div>
+
+        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-2.5">
+          <div class="flex justify-between items-center text-xs">
+            <span class="text-slate-600">Percentual de Destinação Legal:</span>
+            <span class="font-bold text-avbn-darkGreen">Até 2,00% do IRPJ</span>
+          </div>
+          <div class="flex justify-between items-center text-xs">
+            <span class="text-slate-600">Custo Adicional para a Empresa:</span>
+            <span class="font-bold text-avbn-green">R$ 0,00 (Zero Custo)</span>
+          </div>
+          <div class="border-t border-slate-200 pt-2 flex justify-between items-center">
+            <span class="text-xs font-bold text-slate-900">Valor que sua empresa pode destinar:</span>
+            <span id="simDestinationValue" class="text-2xl font-athletic text-avbn-green">R$ 10.000,00</span>
+          </div>
+        </div>
+
+        <!-- Impact Equivalence -->
+        <div class="p-3 bg-avbn-mint rounded-2xl border border-emerald-200 text-xs text-slate-700 space-y-1">
+          <div class="font-bold text-avbn-darkGreen flex items-center gap-1.5">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-avbn-green"></i>
+            Impacto Social Estimado com este Valor:
+          </div>
+          <p id="simImpactText" class="text-slate-700 text-[11px] leading-relaxed">
+            Esse valor proporciona bolas oficiais, uniformes e treinamento qualificado para aproximadamente <strong>12 alunas</strong> durante todo o ano letivo.
+          </p>
+        </div>
+
+        <!-- Action Button -->
+        <div class="pt-2 flex gap-3">
+          <button onclick="closeModal('simulatorModal')" class="flex-1 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition">
+            Fechar
+          </button>
+          <a id="simWhatsappAction" href="#" target="_blank" class="flex-1 py-2.5 rounded-xl bg-avbn-green hover:bg-emerald-700 text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-sm">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            Conversar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL: PERSONALIZADOR COMERCIAL (PARA CADA EMPRESA VISITADA)
+       ========================================================================= -->
+  <div id="customizerModal" class="no-print fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white border border-slate-200 rounded-3xl max-w-lg w-full p-6 shadow-2xl relative">
+      <button onclick="closeModal('customizerModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1.5 rounded-xl bg-slate-100">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-xl bg-emerald-50 text-avbn-green flex items-center justify-center border border-emerald-100 font-bold">
+          <i data-lucide="sliders" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h3 class="text-base font-bold text-slate-900">Personalizar Mídia Kit</h3>
+          <p class="text-xs text-slate-500">Insira o nome da empresa visitada ou atualize os contatos</p>
+        </div>
+      </div>
+
+      <div class="space-y-3.5 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Nome da Empresa Visitada (opcional para a capa):</label>
+          <input type="text" id="custCompanyName" placeholder="Ex: Cerâmica Rocha, Frigorífico Aurora, Cooperativa..." class="w-full bg-slate-50 border border-slate-300 rounded-xl py-2 px-3 text-slate-900 focus:outline-none focus:border-avbn-green">
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Telefone / WhatsApp de Contato:</label>
+          <input type="text" id="custPhone" value="(48) 99999-0000" class="w-full bg-slate-50 border border-slate-300 rounded-xl py-2 px-3 text-slate-900 focus:outline-none focus:border-avbn-green">
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">E-mail Institucional:</label>
+          <input type="text" id="custEmail" value="contato@voleibn.org.br" class="w-full bg-slate-50 border border-slate-300 rounded-xl py-2 px-3 text-slate-900 focus:outline-none focus:border-avbn-green">
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Instagram (@):</label>
+          <input type="text" id="custInsta" value="@voleibn" class="w-full bg-slate-50 border border-slate-300 rounded-xl py-2 px-3 text-slate-900 focus:outline-none focus:border-avbn-green">
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Link do Vídeo no QR Code:</label>
+          <input type="text" id="custVideoUrl" value="https://instagram.com/voleibn" class="w-full bg-slate-50 border border-slate-300 rounded-xl py-2 px-3 text-slate-900 focus:outline-none focus:border-avbn-green">
+        </div>
+
+        <div class="pt-2 flex gap-3">
+          <button onclick="closeModal('customizerModal')" class="flex-1 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold transition">
+            Cancelar
+          </button>
+          <button onclick="applyCustomization()" class="flex-1 py-2.5 rounded-xl bg-avbn-green hover:bg-emerald-700 text-white font-bold transition shadow-sm">
+            Salvar e Aplicar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       JAVASCRIPT LOGIC
+       ========================================================================= -->
+  <script>
+    let qrCodeInstance = null;
+
+    // 17 Real Photos of AVBN with descriptions
+    const galleryPhotos = [
+      {
+        src: "assets/hero_bolas.jpeg",
+        title: "Atletas AVBN em Quadra",
+        desc: "Alunas dos núcleos sociais com bolas oficiais Mikasa no Ginásio Municipal de Braço do Norte."
+      },
+      {
+        src: "assets/comunidade_ginasio.jpeg",
+        title: "Comunidade & Famílias no Ginásio",
+        desc: "Mais de 4.000 pessoas impactadas pelo projeto e ações esportivas da associação."
+      },
+      {
+        src: "assets/podio_medalhas.jpeg",
+        title: "Pódio Blumen Cup & Liga SC",
+        desc: "Conquistas expressivas e medalhas representando o voleibol de Braço do Norte em Santa Catarina."
+      },
+      {
+        src: "assets/celebracao_patrocinio.jpeg",
+        title: "Comemoração & Patrocinadores",
+        desc: "Atletas com uniformes oficiais e visibilidade das marcas parceiras em quadra."
+      },
+      {
+        src: "assets/comissao_tecnica.jpeg",
+        title: "Comissão Técnica Qualificada",
+        desc: "Treinadores e professores registrados no CREF em orientação tática e pedagógica."
+      },
+      {
+        src: "assets/competicao_banners.jpeg",
+        title: "Liga Catarinense de Voleibol",
+        desc: "Equipe oficial perfilada com banners e comunicação visual na arena esportiva."
+      },
+      {
+        src: "assets/treinador_timeout.jpeg",
+        title: "Instruções Táticas em Jogo",
+        desc: "Momento de concentração, estratégia e trabalho em equipe durante a partida."
+      },
+      {
+        src: "assets/time_agasalhos.jpeg",
+        title: "Uniformes e Agasalhos Oficiais",
+        desc: "Identidade visual forte da AVBN com marcas de patrocinadores em viagens e jogos."
+      },
+      {
+        src: "assets/ginasio_dorvalino.jpeg",
+        title: "Ginásio Dorvalino Locks",
+        desc: "Equipe completa reunida em treinamento intensivo em Braço do Norte."
+      },
+      {
+        src: "assets/time_quadra_azul.jpeg",
+        title: "Treinamento Técnico em Quadra",
+        desc: "Desenvolvimento de fundamentos: saque, passe, bloqueio e ataque."
+      },
+      {
+        src: "assets/time_ginasio.jpeg",
+        title: "Turma Completa de Alunas",
+        desc: "Iniciação esportiva e base atendidas nos 3 núcleos comunitários."
+      },
+      {
+        src: "assets/real/img_08.jpeg",
+        title: "Treino Tático Coletivo",
+        desc: "Simulação de jogo e posicionamento em quadra para campeonatos estaduais."
+      },
+      {
+        src: "assets/real/img_10.jpeg",
+        title: "Iniciação Esportiva Infantil",
+        desc: "Crianças de 6 a 12 anos aprendendo os primeiros fundamentos do voleibol."
+      },
+      {
+        src: "assets/real/img_12.jpeg",
+        title: "Aquecimento e Preparação Física",
+        desc: "Exercícios funcionais e prevenção de lesões sob supervisão profissional."
+      },
+      {
+        src: "assets/real/img_13.jpeg",
+        title: "Concentração Pré-Jogo",
+        desc: "Atletas focadas e alinhadas com as orientações do corpo técnico da AVBN."
+      },
+      {
+        src: "assets/real/img_15.jpeg",
+        title: "Equipe Oficial em Disputa Estadual",
+        desc: "Representando Braço do Norte com orgulho nos torneios de Santa Catarina."
+      },
+      {
+        src: "assets/real/img_16.jpeg",
+        title: "União e Espírito de Equipe",
+        desc: "A comemoração que traduz os valores humanos ensinados pelo esporte de base."
+      }
+    ];
+
+    let currentPhotoIndex = 0;
+    let isDragging = false;
+    let startX = 0;
+    let currentDeltaX = 0;
+
+    // Initialize on DOM load
+    document.addEventListener("DOMContentLoaded", function() {
+      lucide.createIcons();
+      initQrCode("https://instagram.com/voleibn");
+      calculateTaxSimulation();
+      setupScrollSpy();
+      renderGalleryGrid();
+      renderLightboxThumbnails();
+      setupLightboxGestures();
+    });
+
+    // Render 17 Uncropped Thumbnails in the Gallery Grid Modal
+    function renderGalleryGrid() {
+      const grid = document.getElementById("galleryModalGrid");
+      if (!grid) return;
+      grid.innerHTML = "";
+
+      galleryPhotos.forEach((photo, index) => {
+        const item = document.createElement("div");
+        item.className = "relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-200 shadow-xs cursor-pointer group aspect-[4/3] flex items-center justify-center p-1 hover:border-emerald-400 transition";
+        item.onclick = function() {
+          openLightbox(index);
+        };
+
+        item.innerHTML = `
+          <img src="${photo.src}" class="w-full h-full object-contain transition duration-300 group-hover:scale-105" alt="${photo.title}">
+          <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/40 transition flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <span class="w-10 h-10 rounded-full bg-avbn-lime text-slate-950 flex items-center justify-center font-bold shadow-xl">
+              <i data-lucide="maximize-2" class="w-5 h-5"></i>
+            </span>
+          </div>
+          <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent p-2 text-white pointer-events-none">
+            <div class="text-[10px] font-bold truncate leading-tight">${photo.title}</div>
+            <div class="text-[9px] text-slate-300 truncate">Foto ${index + 1} de 17</div>
+          </div>
+        `;
+        grid.appendChild(item);
+      });
+      lucide.createIcons();
+    }
+
+    // Render Bottom Thumbnails in Full-Screen Lightbox
+    function renderLightboxThumbnails() {
+      const strip = document.getElementById("lightboxThumbStrip");
+      if (!strip) return;
+      strip.innerHTML = "";
+
+      galleryPhotos.forEach((photo, index) => {
+        const thumb = document.createElement("button");
+        thumb.className = `lightbox-thumb shrink-0 w-12 h-10 sm:w-16 sm:h-12 rounded-lg overflow-hidden bg-slate-900 border border-white/10 transition p-0.5 ${index === 0 ? 'ring-2 ring-avbn-lime opacity-100' : 'opacity-40 hover:opacity-80'}`;
+        thumb.onclick = function(e) {
+          e.stopPropagation();
+          showLightboxPhoto(index);
+        };
+        thumb.innerHTML = `<img src="${photo.src}" class="w-full h-full object-contain pointer-events-none" alt="${photo.title}">`;
+        strip.appendChild(thumb);
+      });
+    }
+
+    // Open Full-Screen Lightbox
+    function openLightbox(index) {
+      currentPhotoIndex = index;
+      const lightbox = document.getElementById("lightboxModal");
+      if (!lightbox) return;
+
+      closeModal("galleryModal"); // Close thumbnail modal if open
+      lightbox.classList.remove("hidden");
+      lightbox.classList.add("flex");
+      document.body.style.overflow = "hidden"; // Prevent body scroll
+      showLightboxPhoto(index);
+      lucide.createIcons();
+    }
+
+    // Close Full-Screen Lightbox
+    function closeLightbox() {
+      const lightbox = document.getElementById("lightboxModal");
+      if (!lightbox) return;
+      lightbox.classList.add("hidden");
+      lightbox.classList.remove("flex");
+      document.body.style.overflow = ""; // Restore body scroll
+    }
+
+    // Show Specific Photo in Lightbox
+    function showLightboxPhoto(index) {
+      if (index < 0) index = galleryPhotos.length - 1;
+      if (index >= galleryPhotos.length) index = 0;
+      currentPhotoIndex = index;
+
+      const photo = galleryPhotos[index];
+      const img = document.getElementById("lightboxImg");
+      if (!img) return;
+
+      img.style.transition = "none";
+      img.style.transform = "translateX(0px)";
+      img.src = photo.src;
+      img.alt = photo.title;
+
+      document.getElementById("lightboxCounter").innerText = `${index + 1} / ${galleryPhotos.length}`;
+      document.getElementById("lightboxTitle").innerText = photo.title;
+      document.getElementById("lightboxDesc").innerText = photo.desc;
+
+      // Highlight active thumb in bottom bar
+      document.querySelectorAll(".lightbox-thumb").forEach((thumb, i) => {
+        if (i === index) {
+          thumb.className = "lightbox-thumb shrink-0 w-12 h-10 sm:w-16 sm:h-12 rounded-lg overflow-hidden bg-slate-900 border border-white/10 transition p-0.5 ring-2 ring-avbn-lime opacity-100 scale-105";
+          thumb.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+        } else {
+          thumb.className = "lightbox-thumb shrink-0 w-12 h-10 sm:w-16 sm:h-12 rounded-lg overflow-hidden bg-slate-900 border border-white/10 transition p-0.5 opacity-40 hover:opacity-80";
+        }
+      });
+    }
+
+    function nextLightboxPhoto(e) {
+      if (e) e.stopPropagation();
+      showLightboxPhoto(currentPhotoIndex + 1);
+    }
+
+    function prevLightboxPhoto(e) {
+      if (e) e.stopPropagation();
+      showLightboxPhoto(currentPhotoIndex - 1);
+    }
+
+    // Touch & Mouse Drag Gestures Setup ("cliente consegue arrastar e ver como galeria")
+    function setupLightboxGestures() {
+      const container = document.getElementById("lightboxImgContainer");
+      const img = document.getElementById("lightboxImg");
+      if (!container || !img) return;
+
+      // Touch Events (Mobile/Tablet)
+      container.addEventListener("touchstart", function(e) {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+        currentDeltaX = 0;
+        img.style.transition = "none";
+      }, { passive: true });
+
+      container.addEventListener("touchmove", function(e) {
+        if (!isDragging) return;
+        const currentX = e.touches[0].clientX;
+        currentDeltaX = currentX - startX;
+        img.style.transform = `translateX(${currentDeltaX}px) scale(0.98)`;
+      }, { passive: true });
+
+      container.addEventListener("touchend", function() {
+        if (!isDragging) return;
+        isDragging = false;
+        img.style.transition = "transform 0.25s ease-out";
+
+        if (currentDeltaX < -50) {
+          nextLightboxPhoto();
+        } else if (currentDeltaX > 50) {
+          prevLightboxPhoto();
+        } else {
+          img.style.transform = "translateX(0px)";
+        }
+      });
+
+      // Mouse Drag Events (Desktop)
+      container.addEventListener("mousedown", function(e) {
+        startX = e.clientX;
+        isDragging = true;
+        currentDeltaX = 0;
+        img.style.transition = "none";
+      });
+
+      window.addEventListener("mousemove", function(e) {
+        if (!isDragging) return;
+        const currentX = e.clientX;
+        currentDeltaX = currentX - startX;
+        img.style.transform = `translateX(${currentDeltaX}px) scale(0.98)`;
+      });
+
+      window.addEventListener("mouseup", function() {
+        if (!isDragging) return;
+        isDragging = false;
+        img.style.transition = "transform 0.25s ease-out";
+
+        if (currentDeltaX < -60) {
+          nextLightboxPhoto();
+        } else if (currentDeltaX > 60) {
+          prevLightboxPhoto();
+        } else {
+          img.style.transform = "translateX(0px)";
+        }
+      });
+    }
+
+    // Keyboard Navigation (Arrow Keys and Escape)
+    window.addEventListener("keydown", function(e) {
+      const lightbox = document.getElementById("lightboxModal");
+      if (lightbox && !lightbox.classList.contains("hidden")) {
+        if (e.key === "ArrowRight") nextLightboxPhoto();
+        if (e.key === "ArrowLeft") prevLightboxPhoto();
+        if (e.key === "Escape") closeLightbox();
+      }
+    });
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const icon = document.getElementById('menuIcon');
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        icon.setAttribute('data-lucide', 'x');
+      } else {
+        menu.classList.add('hidden');
+        icon.setAttribute('data-lucide', 'menu');
+      }
+      lucide.createIcons();
+    }
+
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const icon = document.getElementById('menuIcon');
+      menu.classList.add('hidden');
+      icon.setAttribute('data-lucide', 'menu');
+      lucide.createIcons();
+    }
+
+    // QR Code Generator
+    function initQrCode(url) {
+      const container = document.getElementById("qrcodeVideo");
+      if (!container) return;
+      container.innerHTML = "";
+      try {
+        qrCodeInstance = new QRCode(container, {
+          text: url,
+          width: 100,
+          height: 100,
+          colorDark : "#064e3b",
+          colorLight : "#ffffff",
+          correctLevel : QRCode.CorrectLevel.H
+        });
+      } catch (e) {
+        console.error("QRCode render fallback", e);
+      }
+    }
+
+    // ScrollSpy: highlight active section in website navbar
+    function setupScrollSpy() {
+      const sections = document.querySelectorAll('.site-section');
+      const navLinks = document.querySelectorAll('.nav-site-link');
+
+      window.addEventListener('scroll', function() {
+        let currentId = 'hero';
+        const scrollPosition = window.pageYOffset + 220;
+
+        // Auto-reveal website navbar on scroll past Hero
+        const navbar = document.getElementById('mainNavbar');
+        if (navbar) {
+          if (window.pageYOffset > 100) {
+            navbar.classList.remove('-translate-y-full', 'opacity-0', 'pointer-events-none');
+            navbar.classList.add('translate-y-0', 'opacity-100');
+          } else {
+            navbar.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+            navbar.classList.remove('translate-y-0', 'opacity-100');
+          }
+        }
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentId = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          if (link.getAttribute('data-nav') === currentId) {
+            link.className = 'nav-site-link px-2.5 py-1.5 rounded-lg text-xs font-bold text-avbn-darkGreen bg-emerald-50 border border-emerald-200 shadow-2xs transition';
+          } else {
+            link.className = 'nav-site-link px-2.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-avbn-green hover:bg-slate-50 border border-transparent transition';
+          }
+        });
+      });
+    }
+
+    // Modals
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    // Close modal on click outside
+    window.onclick = function(event) {
+      if (event.target.id === 'simulatorModal') closeModal('simulatorModal');
+      if (event.target.id === 'customizerModal') closeModal('customizerModal');
+      if (event.target.id === 'galleryModal') closeModal('galleryModal');
+    }
+
+    // Tax Simulation Calculation
+    function calculateTaxSimulation() {
+      const irpj = parseFloat(document.getElementById('simIrpjInput').value) || 0;
+      const destValue = irpj * 0.02;
+      
+      const formatted = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(destValue);
+      document.getElementById('simDestinationValue').innerText = formatted;
+
+      const ballsEquiv = Math.round(destValue / 250);
+      const studentsEquiv = Math.max(1, Math.round(destValue / 850));
+
+      document.getElementById('simImpactText').innerHTML = `
+        Esse valor representa um investimento de <strong>${formatted}</strong> a custo zero para a empresa, capaz de viabilizar uniformes completos e treinos qualificados para <strong>${studentsEquiv} alunas</strong> ou a aquisição de cerca de <strong>${ballsEquiv} bolas oficiais Mikasa</strong>.
+      `;
+
+      const phoneClean = document.getElementById('custPhone').value.replace(/\D/g, '') || "5548999990000";
+      const message = encodeURIComponent(`Olá! Fiz a simulação de destinação do IRPJ da minha empresa para o Projeto Vôlei AVBN no valor de ${formatted}. Gostaria de conhecer o projeto e receber as orientações para destinação.`);
+      document.getElementById('simWhatsappAction').href = `https://wa.me/${phoneClean}?text=${message}`;
+    }
+
+    // Customization logic
+    function applyCustomization() {
+      const compName = document.getElementById('custCompanyName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const email = document.getElementById('custEmail').value.trim();
+      const insta = document.getElementById('custInsta').value.trim();
+      const videoUrl = document.getElementById('custVideoUrl').value.trim();
+
+      const coverCustom = document.getElementById('coverCompanyCustom');
+      
+      if (compName) {
+        document.querySelectorAll('.custom-company-target').forEach(el => el.innerText = compName);
+        document.getElementById('companyBadgeName').innerText = compName;
+        coverCustom.classList.remove('hidden');
+        coverCustom.classList.add('flex');
+      } else {
+        coverCustom.classList.add('hidden');
+        coverCustom.classList.remove('flex');
+      }
+
+      if (phone) {
+        document.getElementById('contactPhoneDisplay').innerText = phone;
+        const cleanPhone = phone.replace(/\D/g, '');
+        document.getElementById('contactPhoneLink').href = `https://wa.me/55${cleanPhone}?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20apoio%20ao%20Projeto%20Vôlei%20AVBN`;
+      }
+
+      if (email) {
+        document.getElementById('contactEmailDisplay').innerText = email;
+        document.getElementById('contactEmailLink').href = `mailto:${email}?subject=Apoio%20ao%20Projeto%20Vôlei%20AVBN`;
+      }
+
+      if (insta) {
+        document.getElementById('contactInstaDisplay').innerText = insta;
+        const cleanInsta = insta.replace('@', '');
+        document.getElementById('contactInstaLink').href = `https://instagram.com/${cleanInsta}`;
+      }
+
+      if (videoUrl) {
+        initQrCode(videoUrl);
+      }
+
+      calculateTaxSimulation();
+      closeModal('customizerModal');
+    }
+  </script>
+</body>
+</html>

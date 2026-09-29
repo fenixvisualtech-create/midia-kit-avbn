@@ -1,0 +1,18 @@
+{
+  "name": "midia-kit-volei-bn",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website Oficial e Mídia Kit Institucional - Associação de Vôlei BN (Lei Federal de Incentivo ao Esporte)",
+  "scripts": {
+    "start": "node server.js",
+    "build": "echo 'Build OK: Site estático pronto para deploy na Vercel'"
+  },
+  "keywords": [
+    "volei",
+    "avbn",
+    "midia-kit",
+    "esporte",
+    "lei-de-incentivo"
+  ],
+  "author": "AVBN"
+}
