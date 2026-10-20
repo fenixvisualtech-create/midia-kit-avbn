@@ -13,16 +13,15 @@
 - Nove PDFs individuais A4 paisagem e um PDF completo de nove páginas.
 - Bibliotecas JavaScript locais para manter galeria, ícones e geração de QR sem depender dos CDNs.
 
-## Para fechar a impressão definitiva
-1. Informar o endereço público do site em `config.js`, campo `siteUrl`.
-2. Informar o link do vídeo publicado em `config.js`, campo `videoUrl`.
-3. Gerar novamente os PDFs depois de preencher esses dois campos.
+## Links finais aprovados
+- Site: https://fenixvisualtech-create.github.io/midia-kit-avbn/
+- Simulador: https://fenixvisualtech-create.github.io/midia-kit-avbn/#simulador
+- Vídeo institucional: https://www.instagram.com/reels/Deu1bu5Re-R/
+- Contabilidade: https://wa.me/554836584155
 
-Os dois QR Codes pendentes estão identificados no material. Nenhum deles leva a um endereço inventado ou ao perfil do Instagram em lugar do vídeo. Ao publicar o site, o QR do simulador usa automaticamente o próprio endereço público; para gerar os PDFs localmente é necessário preencher `siteUrl`.
+O QR Code do vídeo foi testado pelo cliente e incluído no site e na última página dos PDFs. Os três QR Codes estão preenchidos.
 
-O link direto do simulador é o endereço público acrescido de `#simulador`.
-
-O telefone institucional `(48) 99999-0000` e o e-mail foram mantidos conforme o briefing original; o telefone deve ser confirmado antes da publicação final. A contabilidade usa o número verificado no documento do cliente.
+Contatos aprovados pelo cliente: WhatsApp (48) 99913-0342; e-mail associacaovoleibn@outlook.com; Instagram @voleibn; Facebook /voleibn. Apoio institucional: Prefeitura de Braço do Norte e DME - Departamento Municipal de Esportes.
 
 ## Como abrir e gerar
 Abra `index.html` no navegador ou execute `npm start` na pasta do site. Para gerar os PDFs, execute `npm install` e `npm run pdf`. O Chrome deve estar instalado; é possível indicar outro caminho pela variável `CHROME_PATH`. Os PDFs são gravados na pasta indicada por `PDF_OUTPUT_DIR` ou, por padrão, na pasta `PDFs` ao lado do site.
@@ -33,3 +32,5 @@ Este pacote contém os arquivos atualizados para substituir a versão existente 
 O percentual geral de 2% para empresas no Lucro Real em 2026/2027 foi conferido no Decreto nº 12.861/2026. A contabilidade deve confirmar a base elegível e o limite disponível de cada empresa. Não foram alterados o processo, o orçamento aprovado e os dados do projeto fornecidos pelo cliente.
 https://www.gov.br/esporte/pt-br/noticias-e-conteudos/esporte/decreto-que-aprimora-a-lei-de-incentivo-ao-esporte-e-publicado
 https://www.gov.br/esporte/pt-br/acoes-e-programas/lei-de-incentivo-ao-esporte/fases-do-projeto-2
+
+Revisão dos contatos: atualizados site e PDFs; retiradas as legendas de fotos/jogos e envio de propostas; acrescentado Facebook. O QR do vídeo está preenchido com o link aprovado pelo cliente.
