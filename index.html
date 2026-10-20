@@ -10,12 +10,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   
+  <script src="config.js"></script>
   <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/vendor/tailwind.js"></script>
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/vendor/lucide.js"></script>
   <!-- QRCode.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="assets/vendor/qrcode.js"></script>
 
   <script>
     tailwind.config = {
@@ -104,6 +105,7 @@
       background: #047857;
     }
   </style>
+<link rel="stylesheet" href="assets/ajustes.css">
 </head>
 <body class="min-h-screen text-slate-800 flex flex-col selection:bg-avbn-green selection:text-white">
 
@@ -120,7 +122,7 @@
         </div>
         <div class="flex items-center gap-2">
           <span class="text-base font-black tracking-tight text-slate-900 font-sans">AVBN</span>
-          <span class="hidden sm:inline-block text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-avbn-darkGreen border border-emerald-200">Lei nº 2504642</span>
+          <span class="hidden sm:inline-block text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-avbn-darkGreen border border-emerald-200">Processo nº 2504642</span>
         </div>
       </a>
 
@@ -285,7 +287,7 @@
 
           <!-- Explanatory Subtitle -->
           <p class="text-[11px] sm:text-sm lg:text-base text-slate-200 leading-relaxed max-w-2xl font-medium filter drop-shadow">
-            Como sua empresa pode transformar parte do <strong>Imposto de Renda devido (Lucro Real)</strong> em esporte, educação, saúde e futuro para <strong>300 crianças e adolescentes</strong> de Braço do Norte. <strong>Custo zero para a empresa e 100% de dedução fiscal.</strong>
+            Como sua empresa pode transformar parte do <strong>Imposto de Renda devido (Lucro Real)</strong> em esporte, educação, saúde e futuro, com meta de atender <strong>300 crianças e adolescentes</strong> de Braço do Norte. <strong>Custo zero para a empresa e 100% de dedução fiscal.</strong>
           </p>
 
           <!-- Ministry & Process Tag -->
@@ -298,6 +300,7 @@
             <span class="text-slate-300 font-medium hidden sm:inline">Ministério do Esporte • Governo Federal</span>
           </div>
 
+          <div class="official-marks"><img src="assets/lei-incentivo-esporte.png" alt="Lei de Incentivo ao Esporte"><img src="assets/ministerio-esporte.jpeg" alt="Ministério do Esporte e Governo Federal"><span>CNPJ<br><strong>32.904.295/0001-17</strong></span></div>
           <!-- CTAs (Stack vertical full-width no celular como na referência media_1790621371691.png) -->
           <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 w-full">
             <a href="#como-participar" class="w-full sm:w-auto px-5 py-3 sm:py-2.5 rounded-xl bg-avbn-lime hover:bg-lime-400 text-slate-950 font-black text-xs uppercase tracking-wider transition shadow-lg flex items-center justify-center gap-2">
@@ -344,7 +347,7 @@
               <i data-lucide="users" class="w-3.5 h-3.5 sm:w-6 sm:h-6"></i>
             </div>
             <div class="overflow-hidden min-w-0">
-              <div class="text-[8px] sm:text-[10px] uppercase font-bold text-slate-400 truncate">FORMAÇÃO</div>
+              <div class="text-[8px] sm:text-[10px] uppercase font-bold text-slate-400 truncate">META DO PROJETO</div>
               <div class="text-[10px] sm:text-sm font-black text-white leading-tight truncate">300 Crianças</div>
               <div class="text-[9px] sm:text-xs text-slate-300 truncate">3 Núcleos BN</div>
             </div>
@@ -436,7 +439,7 @@
                 <div class="flex-1">
                   <div class="flex items-baseline gap-2">
                     <span class="text-3xl font-athletic text-avbn-green">+4.000</span>
-                    <span class="text-xs font-bold text-slate-800 leading-tight">Alunas impactadas pelas atividades</span>
+                    <span class="text-xs font-bold text-slate-800 leading-tight">Alunas impactadas em 30 anos do Projeto das Escolinhas</span>
                   </div>
                   <p class="text-xs text-slate-600 mt-1 leading-relaxed">
                     Trabalho comunitário contínuo nos ginásios municipais de Braço do Norte, unindo juventude e famílias.
@@ -499,7 +502,7 @@
               Mecanismo Fiscal (Lei Federal nº 11.438/06)
             </span>
             <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">O Projeto de Incentivo • Destinação Inteligente</h2>
-            <p class="text-sm text-slate-600 mt-1">Como o incentivo fiscal federal viabiliza materiais, estrutura e equipe para 300 atletas.</p>
+            <p class="text-sm text-slate-600 mt-1">Como o incentivo fiscal federal viabiliza materiais, estrutura e equipe, com meta de atendimento a 300 atletas.</p>
           </div>
           <div class="bg-emerald-100 border border-emerald-300 px-4 py-2 rounded-2xl text-xs font-bold text-avbn-darkGreen flex items-center gap-2 shadow-xs shrink-0">
             <i data-lucide="check-circle-2" class="w-4 h-4 text-avbn-green"></i>
@@ -522,47 +525,47 @@
                 Projeto “FORMANDO O CIDADÃO ATLETA!”
               </h3>
               <p class="text-sm text-slate-600 leading-relaxed mt-2">
-                Aprovado pelo <strong>Ministério do Esporte</strong> sob o <strong>Processo nº 2504642</strong>, com valor global autorizado de <strong>R$ 353.095,11</strong>. O projeto visa custear integralmente a estrutura de treinamentos, materiais esportivos oficiais e participação em torneios para <strong>300 crianças e adolescentes (6 a 18 anos)</strong> de Braço do Norte.
+                Aprovado pelo <strong>Ministério do Esporte</strong> sob o <strong>Processo nº 2504642</strong>, com valor global autorizado de <strong>R$ 353.095,11</strong>. O projeto visa custear integralmente a estrutura de treinamentos, materiais esportivos oficiais e participação em torneios, com meta de atender <strong>300 crianças e adolescentes (6 a 18 anos)</strong> de Braço do Norte.
               </p>
             </div>
 
             <!-- 3 Core Action Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
               <!-- Ação 1 -->
-              <div class="bg-white p-4.5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
+              <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
                 <div>
                   <div class="w-9 h-9 rounded-xl bg-emerald-50 text-avbn-green flex items-center justify-center font-bold mb-3">
                     <i data-lucide="graduation-cap" class="w-4 h-4"></i>
                   </div>
                   <div class="font-bold text-sm text-slate-900">Formação Integral</div>
                   <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
-                    Aulas estruturadas no contraturno com acompanhamento pedagógico e valores de cidadania.
+                    Contratação de 4 profissionais e 2 coordenadores para acompanhar a formação esportiva e humana das alunas.
                   </p>
                 </div>
               </div>
 
               <!-- Ação 2 -->
-              <div class="bg-white p-4.5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
+              <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
                 <div>
                   <div class="w-9 h-9 rounded-xl bg-emerald-50 text-avbn-green flex items-center justify-center font-bold mb-3">
                     <i data-lucide="volleyball" class="w-4 h-4"></i>
                   </div>
                   <div class="font-bold text-sm text-slate-900">Material Oficial</div>
                   <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
-                    Bolas oficiais Mikasa, redes, uniformes completos de jogo e equipamentos de proteção.
+                    Reestruturação dos equipamentos e materiais de treino, incluindo bolas oficiais, redes e equipamentos de proteção.
                   </p>
                 </div>
               </div>
 
               <!-- Ação 3 -->
-              <div class="bg-white p-4.5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
+              <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
                 <div>
                   <div class="w-9 h-9 rounded-xl bg-emerald-50 text-avbn-green flex items-center justify-center font-bold mb-3">
                     <i data-lucide="trophy" class="w-4 h-4"></i>
                   </div>
-                  <div class="font-bold text-sm text-slate-900">Competições</div>
+                  <div class="font-bold text-sm text-slate-900">Ampliação do Atendimento</div>
                   <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
-                    Transporte, inscrição, arbitragem e alimentação para campeonatos em Santa Catarina.
+                    Implantação de mais um núcleo de voleibol no município, ampliando o acesso às aulas e à prática esportiva.
                   </p>
                 </div>
               </div>
@@ -664,14 +667,14 @@
         <!-- 4 Key Impact Metric Cards -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 text-center">
-            <div class="text-3xl sm:text-4xl font-athletic text-avbn-green">300</div>
-            <div class="text-xs font-bold text-slate-900 mt-1">Alunas Gratuitas</div>
-            <div class="text-[11px] text-slate-500">100% isentas de custos</div>
+            <div class="text-3xl sm:text-4xl font-athletic text-avbn-green">+200</div>
+            <div class="text-xs font-bold text-slate-900 mt-1">Alunas atendidas</div>
+            <div class="text-[11px] text-slate-500">Com aulas gratuitas</div>
           </div>
           <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 text-center">
-            <div class="text-3xl sm:text-4xl font-athletic text-avbn-green">100%</div>
-            <div class="text-xs font-bold text-slate-900 mt-1">Contraturno Escolar</div>
-            <div class="text-[11px] text-slate-500">Frequência e notas monitoradas</div>
+            <div class="text-3xl sm:text-4xl font-athletic text-avbn-green">6 a 18 anos</div>
+            <div class="text-xs font-bold text-slate-900 mt-1">Aprendizado contínuo</div>
+            <div class="text-[11px] text-slate-500">Da iniciação à formação esportiva</div>
           </div>
           <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 text-center">
             <div class="text-3xl sm:text-4xl font-athletic text-avbn-green">3</div>
@@ -679,9 +682,9 @@
             <div class="text-[11px] text-slate-500">Acesso descentralizado</div>
           </div>
           <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 text-center">
-            <div class="text-3xl sm:text-4xl font-athletic text-avbn-green">+15</div>
-            <div class="text-xs font-bold text-slate-900 mt-1">Pódios e Troféus</div>
-            <div class="text-[11px] text-slate-500">Liga Catarinense e Copas</div>
+            <div class="text-3xl sm:text-4xl font-athletic text-avbn-green">Competições</div>
+            <div class="text-xs font-bold text-slate-900 mt-1">Locais, regionais e estaduais</div>
+            <div class="text-[11px] text-slate-500">Levando o nome de Braço do Norte e conquistando vários pódios e troféus</div>
           </div>
         </div>
 
@@ -705,7 +708,7 @@
                 Representatividade Municipal e Regional
               </h3>
               <p class="text-sm text-slate-600 leading-relaxed">
-                As equipes de rendimento da AVBN representam Braço do Norte em campeonatos de prestígio estadual, como a <strong>Liga Catarinense de Voleibol</strong>, a <strong>Blumen Cup</strong> e os <strong>Joguinhos Abertos de Santa Catarina</strong>, levando o nome da cidade e de seus apoiadores ao topo do pódio.
+                As equipes de rendimento da AVBN representam Braço do Norte em campeonatos de prestígio estadual, como a <strong>Liga Voleibol Santa Catarina</strong>, a <strong>Blumen Cup</strong> e os <strong>Joguinhos Abertos de Santa Catarina</strong>, levando o nome da cidade e de seus apoiadores ao topo do pódio.
               </p>
             </div>
           </div>
@@ -727,7 +730,7 @@
                     <i data-lucide="trophy" class="w-3 h-3 text-avbn-green"></i>
                     Pódio Blumen Cup & Liga SC
                   </span>
-                  <h4 class="text-sm font-black text-slate-900 leading-snug">Orgulho para Braço do Norte e para os Patrocinadores</h4>
+                  <h4 class="text-sm font-black text-slate-900 leading-snug">Orgulho para Braço do Norte, levando o nome do município e as empresas apoiadoras</h4>
                   <p class="text-xs text-slate-600 mt-1 leading-relaxed">
                     Conquistas que coroam a dedicação diária de atletas e comissão técnica em campeonatos oficiais de Santa Catarina.
                   </p>
@@ -770,15 +773,15 @@
           <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-xs flex flex-col justify-between">
             <div>
               <div class="w-10 h-10 rounded-2xl bg-emerald-50 text-avbn-green flex items-center justify-center font-bold mb-4">
-                <i data-lucide="shirt" class="w-5 h-5"></i>
+                <i data-lucide="video" class="w-5 h-5"></i>
               </div>
-              <h3 class="font-black text-base text-slate-900 mb-1.5">Uniformes Oficiais</h3>
+              <h3 class="font-black text-base text-slate-900 mb-1.5">Vídeo Institucional</h3>
               <p class="text-xs text-slate-600 leading-relaxed">
-                Logomarca estampada em destaque nos uniformes de jogo, viagem e treino das 300 atletas em todas as competições.
+                Apresentação do projeto, das atividades e do apoio das empresas em conteúdo audiovisual institucional.
               </p>
             </div>
             <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-bold text-avbn-green">
-              Visibilidade Direta em Quadra
+              Conteúdo para Apresentação
             </div>
           </div>
 
@@ -786,15 +789,15 @@
           <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-xs flex flex-col justify-between">
             <div>
               <div class="w-10 h-10 rounded-2xl bg-emerald-50 text-avbn-green flex items-center justify-center font-bold mb-4">
-                <i data-lucide="flag" class="w-5 h-5"></i>
+                <i data-lucide="handshake" class="w-5 h-5"></i>
               </div>
-              <h3 class="font-black text-base text-slate-900 mb-1.5">Banners & Arenas</h3>
+              <h3 class="font-black text-base text-slate-900 mb-1.5">Ações com a Escolinha</h3>
               <p class="text-xs text-slate-600 leading-relaxed">
-                Banners físicos e wind-banners nos ginásios durante os treinamentos diários e eventos esportivos sediados na cidade.
+                Disponibilização da Escolinha para ações de marketing da empresa, com planejamento conjunto e respeito à rotina das alunas.
               </p>
             </div>
             <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-bold text-avbn-green">
-              Público Local e Regional
+              Ativações em Parceria
             </div>
           </div>
 
@@ -834,7 +837,7 @@
         <!-- Banner with Photo + Strong Closing Quote -->
         <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-center gap-6">
           <div class="w-full md:w-1/3 rounded-2xl overflow-hidden aspect-video relative shrink-0">
-            <img src="assets/competicao_banners.jpeg" alt="Banners em quadra" class="w-full h-full object-cover">
+            <img src="assets/competicao_banners.jpeg" alt="Atletas reunidas em competição" class="w-full h-full object-cover">
           </div>
           <div class="flex-1">
             <span class="text-xs font-bold text-avbn-green uppercase tracking-wider">Compromisso com o Patrocinador</span>
@@ -878,9 +881,9 @@
             <div class="w-10 h-10 rounded-2xl bg-emerald-100 text-avbn-darkGreen flex items-center justify-center font-bold mb-4">
               <i data-lucide="book-open" class="w-5 h-5"></i>
             </div>
-            <h3 class="font-black text-base text-slate-900 mb-1">Marco Regulatório</h3>
+            <h3 class="font-black text-base text-slate-900 mb-1">Prestação de Contas</h3>
             <p class="text-xs text-slate-600 leading-relaxed">
-              Regido pela <strong>Lei Federal nº 11.438/2006</strong> e Decreto nº 6.180/2007. Marco histórico consolidado com quase duas décadas de plena vigência no Brasil.
+              Prestação de contas via <strong>Ministério do Esporte</strong>, com acompanhamento da execução e comprovação da aplicação dos recursos do projeto.
             </p>
           </div>
 
@@ -902,7 +905,7 @@
             </div>
             <h3 class="font-black text-base text-slate-900 mb-1">Teto Ampliado (2%)</h3>
             <p class="text-xs text-slate-600 leading-relaxed">
-              O Art. 18 da <strong>Lei nº 14.439/2022</strong> ampliou o limite de dedução de pessoas jurídicas de 1% para <strong>até 2% do IRPJ devido</strong>.
+              Empresas no <strong>Lucro Real</strong> podem destinar até <strong>2% do IRPJ elegível</strong> por período de apuração em 2026 e 2027, conforme o Decreto nº 12.861/2026.
             </p>
           </div>
 
@@ -911,13 +914,14 @@
             <div class="w-10 h-10 rounded-2xl bg-emerald-100 text-avbn-darkGreen flex items-center justify-center font-bold mb-4">
               <i data-lucide="check-check" class="w-5 h-5"></i>
             </div>
-            <h3 class="font-black text-base text-slate-900 mb-1">Recibo de Mecenato</h3>
+            <h3 class="font-black text-base text-slate-900 mb-1">Recibo de Financiador</h3>
             <p class="text-xs text-slate-600 leading-relaxed">
-              Comprovante oficial emitido pelo Governo Federal que confere à empresa total quitação fiscal e dedução direta na apuração do imposto.
+              Documento que comprova o aporte ao projeto e integra a documentação necessária para a dedução fiscal, conforme a apuração da contabilidade da empresa.
             </p>
           </div>
         </div>
 
+        <div class="accounting-panel"><div><span class="eyebrow">SUPORTE À EMPRESA</span><h3>Converse com a contabilidade</h3><p>Orientações sobre a destinação do IRPJ e a documentação do aporte.</p><a href="https://wa.me/554836584155" target="_blank" rel="noopener">WhatsApp: (48) 3658-4155</a></div><a class="qr-white" href="https://wa.me/554836584155" target="_blank" rel="noopener" aria-label="Abrir WhatsApp da contabilidade"><div id="qrcodeAccounting"></div></a></div>
         <!-- Compliance Checklist Banner -->
         <div class="bg-avbn-mint p-6 rounded-3xl border border-emerald-200 flex flex-col md:flex-row items-center justify-between gap-6">
           <div class="space-y-1">
@@ -957,7 +961,7 @@
         </div>
 
         <!-- 4 Step Cards Flow -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+        <div class="participation-steps grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
           <!-- Passo 1 -->
           <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-xs flex flex-col justify-between relative group hover:border-emerald-400 transition">
             <div class="w-8 h-8 rounded-full bg-avbn-green text-white flex items-center justify-center font-athletic text-base font-bold mb-4">1</div>
@@ -998,17 +1002,18 @@
           <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-xs flex flex-col justify-between relative group hover:border-emerald-400 transition">
             <div class="w-8 h-8 rounded-full bg-avbn-green text-white flex items-center justify-center font-athletic text-base font-bold mb-4">4</div>
             <div>
-              <h3 class="font-black text-base text-slate-900 mb-1.5">Recibo de Mecenato</h3>
+              <h3 class="font-black text-base text-slate-900 mb-1.5">Recibo de Financiador</h3>
               <p class="text-xs text-slate-600 leading-relaxed">
-                O Ministério do Esporte emite o <strong>Recibo de Mecenato</strong>, permitindo que a empresa abata <strong>100%</strong> do valor no seu DARF de IRPJ.
+                A AVBN emite o <strong>Recibo de Financiador</strong> no sistema oficial. A contabilidade utiliza o documento para deduzir o aporte, respeitando os limites legais do IRPJ.
               </p>
             </div>
             <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-400">100% Compensado</div>
           </div>
         </div>
 
+        <div class="simulation-access"><div><span class="eyebrow">SIMULAÇÃO NO CELULAR</span><h3>Quanto do seu IRPJ pode apoiar o projeto?</h3><p>Calcule até 2% do imposto elegível e converse com a contabilidade.</p><button onclick="openModal('simulatorModal')">Abrir simulador</button><p id="simulatorQrStatus" class="qr-status"></p></div><div id="qrcodeSimulator" class="qr-white"></div></div>
         <!-- Comparative Comparison Box (Com a Lei vs Sem a Lei) -->
-        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
+        <div class="participation-example bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
           <div class="text-center max-w-xl mx-auto mb-6">
             <h3 class="text-lg font-black text-slate-900">Exemplo Comparativo: Onde Seu Tributo Tem Mais Valor?</h3>
             <p class="text-xs text-slate-500 mt-1">Exemplo com empresa que tem R$ 500.000 de IRPJ devido apurado no ano:</p>
@@ -1023,7 +1028,7 @@
               </div>
               <div class="text-2xl font-athletic text-slate-900">Paga R$ 500.000 ao Governo</div>
               <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                O valor vai 100% para o caixa único da União em Brasília. A empresa não obtém retorno institucional, contrapartidas de imagem e <strong>nenhum centavo fica na comunidade local</strong>.
+                Sem a destinação incentivada, o valor permanece no recolhimento do imposto. A empresa não direciona essa parcela especificamente ao projeto esportivo local.
               </p>
             </div>
 
@@ -1058,7 +1063,7 @@
               Acervo Fotográfico Oficial
             </span>
             <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Galeria • Vôlei BN em Ação</h2>
-            <p class="text-sm text-slate-500 mt-1">Registros reais das mais de 300 crianças e adolescentes atendidas pela AVBN.</p>
+            <p class="text-sm text-slate-500 mt-1">Registros reais das atividades com mais de 200 alunas atendidas pela AVBN.</p>
           </div>
           <div class="flex items-center gap-2 bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-full text-xs font-semibold shrink-0">
             <i data-lucide="map-pin" class="w-3.5 h-3.5 text-avbn-green"></i>
@@ -1087,7 +1092,7 @@
             <!-- Bottom Glassmorphic Overlay Badge -->
             <div class="relative z-10 m-4 p-4 rounded-2xl bg-slate-950/75 backdrop-blur-md border border-white/15 flex items-center justify-between text-white transition group-hover:bg-slate-950/90">
               <div class="overflow-hidden pr-2">
-                <div class="text-[10px] uppercase tracking-wider text-avbn-lime font-bold">NÚCLEOS & FORMAÇÃO</div>
+                <div class="text-[10px] uppercase tracking-wider text-avbn-lime font-bold">NÚCLEOS & META DO PROJETO</div>
                 <div class="text-sm sm:text-base font-black text-white leading-tight truncate">Treinos e Iniciação</div>
                 <div class="text-[11px] text-slate-300 truncate">3 núcleos ativos • Clique para tela cheia</div>
               </div>
@@ -1133,7 +1138,7 @@
               <div class="overflow-hidden pr-2">
                 <div class="text-[10px] uppercase tracking-wider text-avbn-lime font-bold">VISIBILIDADE & MARCAS</div>
                 <div class="text-sm sm:text-base font-black text-white leading-tight truncate">Eventos & Patrocinadores</div>
-                <div class="text-[11px] text-slate-300 truncate">Uniformes, banners e arena oficial</div>
+                <div class="text-[11px] text-slate-300 truncate">Atividades, encontros e ações em parceria</div>
               </div>
               <button class="w-10 h-10 rounded-full bg-emerald-500 hover:bg-avbn-lime text-slate-950 flex items-center justify-center font-bold shadow-md transition group-hover:scale-110 shrink-0" title="Ver foto em tela cheia">
                 <i data-lucide="maximize-2" class="w-4 h-4"></i>
@@ -1179,7 +1184,7 @@
              DESTAQUE PRINCIPAL NO FINAL: CENTRAL DE AÇÕES DO PATROCINADOR
              (Transfere os botões de ação em alto destaque visual)
              ======================================================== -->
-        <div class="bg-slate-950/80 backdrop-blur-md p-6 sm:p-8 rounded-3xl text-white shadow-2xl border border-emerald-500/40 mb-12">
+        <div class="sponsor-actions bg-slate-950/80 backdrop-blur-md p-6 sm:p-8 rounded-3xl text-white shadow-2xl border border-emerald-500/40 mb-12">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 pb-4 border-b border-white/10">
             <div class="flex items-center gap-3">
               <div class="w-10 h-10 rounded-2xl bg-avbn-lime text-slate-950 flex items-center justify-center font-bold shadow-md">
@@ -1341,13 +1346,13 @@
                 </span>
                 <h4 class="text-sm font-bold text-white">Conheça o Projeto em Vídeo</h4>
                 <p class="text-xs text-slate-300 max-w-xs mx-auto mt-1">
-                  Aponte a câmera do celular para o QR Code abaixo para assistir às nossas atletas em quadra:
+                  O acesso ao vídeo será disponibilizado aqui assim que a publicação oficial estiver definida.
                 </p>
               </div>
 
               <!-- QR Code Container -->
               <div class="my-4 p-3 bg-white rounded-2xl shadow-md border border-white/20 flex items-center justify-center">
-                <div id="qrcodeVideo" class="w-[100px] h-[100px]"></div>
+                <div id="qrcodeVideo" class="video-qr-slot"><span>Vídeo institucional<br>Link de publicação pendente</span></div>
               </div>
 
               <div class="text-xs text-slate-300 font-medium">
@@ -1502,13 +1507,13 @@
       <div class="space-y-4">
         <div>
           <label class="block text-xs font-semibold text-slate-700 mb-1.5">
-            Imposto de Renda Anual Devido Estimado (IRPJ da Empresa):
+            IRPJ elegível estimado no período (sem adicional):
           </label>
           <div class="relative">
             <span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm font-semibold">R$</span>
-            <input type="number" id="simIrpjInput" value="500000" step="50000" class="w-full bg-slate-50 border border-slate-300 rounded-xl py-2.5 pl-10 pr-4 text-slate-900 text-sm focus:outline-none focus:border-avbn-green" oninput="calculateTaxSimulation()">
+            <input type="number" id="simIrpjInput" min="0" value="500000" step="50000" class="w-full bg-slate-50 border border-slate-300 rounded-xl py-2.5 pl-10 pr-4 text-slate-900 text-sm focus:outline-none focus:border-avbn-green" oninput="calculateTaxSimulation()">
           </div>
-          <p class="text-[11px] text-slate-500 mt-1">Ex: R$ 500.000,00 de IRPJ apurado no período.</p>
+          <p class="text-[11px] text-slate-500 mt-1">Informe o IRPJ elegível, sem o adicional. Confirme a base e o limite disponível com sua contabilidade.</p>
         </div>
 
         <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-2.5">
@@ -1530,10 +1535,10 @@
         <div class="p-3 bg-avbn-mint rounded-2xl border border-emerald-200 text-xs text-slate-700 space-y-1">
           <div class="font-bold text-avbn-darkGreen flex items-center gap-1.5">
             <i data-lucide="sparkles" class="w-3.5 h-3.5 text-avbn-green"></i>
-            Impacto Social Estimado com este Valor:
+            Aplicação no projeto:
           </div>
           <p id="simImpactText" class="text-slate-700 text-[11px] leading-relaxed">
-            Esse valor proporciona bolas oficiais, uniformes e treinamento qualificado para aproximadamente <strong>12 alunas</strong> durante todo o ano letivo.
+            O aporte contribui para profissionais, materiais e ampliação do atendimento.
           </p>
         </div>
 
@@ -1593,9 +1598,10 @@
 
         <div>
           <label class="block font-semibold text-slate-700 mb-1">Link do Vídeo no QR Code:</label>
-          <input type="text" id="custVideoUrl" value="https://instagram.com/voleibn" class="w-full bg-slate-50 border border-slate-300 rounded-xl py-2 px-3 text-slate-900 focus:outline-none focus:border-avbn-green">
+          <input type="text" id="custVideoUrl" value="" placeholder="https://… (vídeo publicado)" class="w-full bg-slate-50 border border-slate-300 rounded-xl py-2 px-3 text-slate-900 focus:outline-none focus:border-avbn-green">
         </div>
 
+        <div><label for="custSiteUrl" class="block font-semibold text-slate-700 mb-1">Endereço público do site (QR do simulador):</label><input type="url" id="custSiteUrl" placeholder="https://seu-site.com.br" class="w-full bg-slate-50 border border-slate-300 rounded-xl py-2 px-3"></div>
         <div class="pt-2 flex gap-3">
           <button onclick="closeModal('customizerModal')" class="flex-1 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold transition">
             Cancelar
@@ -1624,7 +1630,7 @@
       {
         src: "assets/comunidade_ginasio.jpeg",
         title: "Comunidade & Famílias no Ginásio",
-        desc: "Mais de 4.000 pessoas impactadas pelo projeto e ações esportivas da associação."
+        desc: "Mais de 4.000 alunas impactadas pelas atividades em 30 anos do Projeto das Escolinhas."
       },
       {
         src: "assets/podio_medalhas.jpeg",
@@ -1643,7 +1649,7 @@
       },
       {
         src: "assets/competicao_banners.jpeg",
-        title: "Liga Catarinense de Voleibol",
+        title: "Liga Voleibol Santa Catarina",
         desc: "Equipe oficial perfilada com banners e comunicação visual na arena esportiva."
       },
       {
@@ -1711,7 +1717,7 @@
     // Initialize on DOM load
     document.addEventListener("DOMContentLoaded", function() {
       lucide.createIcons();
-      initQrCode("https://instagram.com/voleibn");
+      initializeProjectLinks();
       calculateTaxSimulation();
       setupScrollSpy();
       renderGalleryGrid();
@@ -1946,6 +1952,21 @@
       }
     }
 
+
+function validPublicUrl(value){try{const u=new URL(value);return ['https:','http:'].includes(u.protocol)&&!['localhost','127.0.0.1'].includes(u.hostname)?u:null;}catch{return null;}}
+function renderProjectQr(id,url,size=144){const el=document.getElementById(id);el.replaceChildren();if(!url)return;new QRCode(el,{text:url,width:size,height:size,colorDark:'#064e3b',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M});}
+function initializeProjectLinks(){
+ const cfg=window.AVBN_CONFIG||{}; const site=validPublicUrl(cfg.siteUrl)||validPublicUrl(location.href); const video=validPublicUrl(cfg.videoUrl);
+ renderProjectQr('qrcodeAccounting','https://wa.me/554836584155');
+ const sim=document.getElementById('qrcodeSimulator');
+ if(site){site.hash='simulador';renderProjectQr('qrcodeSimulator',site.href);document.getElementById('simulatorQrStatus').textContent='Aponte a câmera para abrir a simulação.';}
+ else{sim.innerHTML='<span>QR do simulador<br>Endereço público pendente</span>';document.getElementById('simulatorQrStatus').textContent='O simulador já funciona neste site. O QR para impressão depende do endereço público definitivo.';}
+ const v=document.getElementById('qrcodeVideo');if(video){renderProjectQr('qrcodeVideo',video.href);v.closest('.flex-col').querySelector('p').textContent='Aponte a câmera do celular para assistir ao vídeo institucional.';}else{v.innerHTML='<span>Vídeo institucional<br>Link de publicação pendente</span>';}
+ document.getElementById('custSiteUrl').value=cfg.siteUrl||'';document.getElementById('custVideoUrl').value=cfg.videoUrl||'';
+ if(location.hash==='#simulador')openModal('simulatorModal');
+}
+window.addEventListener('hashchange',()=>{if(location.hash==='#simulador')openModal('simulatorModal');});
+
     // ScrollSpy: highlight active section in website navbar
     function setupScrollSpy() {
       const sections = document.querySelectorAll('.site-section');
@@ -2011,19 +2032,13 @@
 
     // Tax Simulation Calculation
     function calculateTaxSimulation() {
-      const irpj = parseFloat(document.getElementById('simIrpjInput').value) || 0;
+      const irpj = Math.max(0, parseFloat(document.getElementById('simIrpjInput').value) || 0);
       const destValue = irpj * 0.02;
       
       const formatted = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(destValue);
       document.getElementById('simDestinationValue').innerText = formatted;
 
-      const ballsEquiv = Math.round(destValue / 250);
-      const studentsEquiv = Math.max(1, Math.round(destValue / 850));
-
-      document.getElementById('simImpactText').innerHTML = `
-        Esse valor representa um investimento de <strong>${formatted}</strong> a custo zero para a empresa, capaz de viabilizar uniformes completos e treinos qualificados para <strong>${studentsEquiv} alunas</strong> ou a aquisição de cerca de <strong>${ballsEquiv} bolas oficiais Mikasa</strong>.
-      `;
-
+      document.getElementById('simImpactText').textContent = 'O aporte contribui para profissionais, materiais de treino e ampliação do atendimento. Estimativa de 2%: a contabilidade confirma o valor disponível para destinação.';
       const phoneClean = document.getElementById('custPhone').value.replace(/\D/g, '') || "5548999990000";
       const message = encodeURIComponent(`Olá! Fiz a simulação de destinação do IRPJ da minha empresa para o Projeto Vôlei AVBN no valor de ${formatted}. Gostaria de conhecer o projeto e receber as orientações para destinação.`);
       document.getElementById('simWhatsappAction').href = `https://wa.me/${phoneClean}?text=${message}`;
@@ -2066,13 +2081,14 @@
         document.getElementById('contactInstaLink').href = `https://instagram.com/${cleanInsta}`;
       }
 
-      if (videoUrl) {
-        initQrCode(videoUrl);
-      }
+      window.AVBN_CONFIG.videoUrl = videoUrl;
+      window.AVBN_CONFIG.siteUrl = document.getElementById("custSiteUrl").value.trim();
+      initializeProjectLinks();
 
       calculateTaxSimulation();
       closeModal('customizerModal');
     }
   </script>
+<script src="print-layout.js"></script>
 </body>
 </html>

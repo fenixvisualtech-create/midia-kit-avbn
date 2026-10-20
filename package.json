@@ -5,7 +5,8 @@
   "description": "Website Oficial e Mídia Kit Institucional - Associação de Vôlei BN (Lei Federal de Incentivo ao Esporte)",
   "scripts": {
     "start": "node server.js",
-    "build": "echo 'Build OK: Site estático pronto para deploy na Vercel'"
+    "build": "echo 'Build OK: Site estático pronto para deploy na Vercel'",
+    "pdf": "node generate_pdfs.js"
   },
   "keywords": [
     "volei",
@@ -14,5 +15,8 @@
     "esporte",
     "lei-de-incentivo"
   ],
-  "author": "AVBN"
+  "author": "AVBN",
+  "dependencies": {
+    "puppeteer-core": "^25.12.0"
+  }
 }
